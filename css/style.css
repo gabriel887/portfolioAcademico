@@ -157,7 +157,7 @@
 .code{
     padding-left: 16px;
     padding-top: 8px;
-    font-size: 1.2em !important;
+    font-size: 1.2em ;
 }
 .code > span{
     font-size: 1.2em;
@@ -166,7 +166,7 @@
 .indent > .code{
     padding-left: 0;
     padding-top: 8px;
-    font-size: 1.2em !important;
+    font-size: 1.2em;
 }
 .indent{
     padding-left: 2em;
@@ -285,7 +285,8 @@ a.item-footer{
     width: 100%;
     height: fit-content;
     padding: 0.8em;
-    color: white;
+    color: #607B96;
+    font-size: 1.1em;
 }
 
 .item-menu > .item-menu {
@@ -309,4 +310,66 @@ a.item-footer{
     padding-bottom: 0.2em;
     padding-left: 1.5em;
 }
+
+.item-menu > .item-menu {
+    display: none;
+}
+
+.dropped > .item-menu{
+    display: block !important;
+}
+
+.opened{
+    font-weight: bold;
+    color: white;
+}
+
+
+@media screen and (max-width:1440px) {
+    .top-navbar{
+        font-size: 0.9em;
+    }
+    .item-navbar{
+        padding: 6px 32px;
+    }
+
+    .code{
+        font-size: 0.9em;
+    }
+
+    .code > span{
+        font-size: 0.9em;
+    }
+
+    .indent > .code{
+        font-size: 0.9em;
+    }
+
+    #textoBemVindo{
+        font-size: 1.1em;
+    }
+
+    #textoMeuNome{
+        font-size: 1.6em;
+    }
+
+    #textoDesenv{
+        font-size: 1.4em;
+    }
+
+    .md-hidden{
+        display: none !important;
+    }
+
+    .item-menu{
+        font-size: 0.8em;
+    }
     
+    #menuInformacoes {
+        padding-left: 0.9em;
+    }
+
+    #menuInformacoes > .item-menu{
+        padding-left: 0.5em;
+    }
+}
