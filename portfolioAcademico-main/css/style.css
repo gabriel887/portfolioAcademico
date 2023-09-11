@@ -1,0 +1,387 @@
+/*Variáveis */
+:root {
+    --corBorda: #1E2D3D;
+    --corBordaCinza: #2B2D30;
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Code';
+}
+
+.hidden{
+    display: none !important;
+}
+
+/* Cores */
+.b-gray{
+    background-color: #2B2D30;
+}
+
+.b-black{
+    background-color: #1E1F22;
+}
+
+.orange{
+    color: #D67C32;
+}
+
+.t-orange{
+    color: #D67C32;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.t-purple{
+    color:  #AA51C9;
+}
+
+.t-green{
+    color: #6B895A;
+}
+
+.t-lightGreen{
+    color: #359A4B;
+}
+
+.t-yellow{
+    color: #b9b428;
+}
+
+
+.ml-auto{
+    margin-left: auto;
+}
+
+/* Elementos */
+.background{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container{
+    width: 90%;
+    height: 90%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--corBorda);
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+}
+
+.top-navbar{
+    flex: 0 1 48px;
+    width: 100%;
+    display: flex;
+    border-bottom-style: solid;
+    border-bottom-color: var(--corBorda);
+    border-bottom-width: 2px;
+    font-size: 1.2em;
+}
+
+.item-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32px;
+    color: #607B96;
+    border-right-color: var(--corBorda);
+    border-right-width: 2px;
+    border-right-style: solid;
+}
+
+.item-navbar.hover:hover{
+    color: white;
+    border-bottom-color: #D67C32 !important;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.item-navbar.selected{
+    color: white;
+    border-bottom-color: #D67C32 !important;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+}
+
+.item-navbar.ml-auto{
+    border-left-color: var(--corBorda);
+    border-left-width: 2px;
+    border-left-style: solid;
+}
+.item-navbar.ml-auto:hover{
+    color:white;
+}
+
+#mainBemVindo{
+    width: 100%;
+    display: flex;
+}
+
+.main{
+    flex: 1 1 auto;
+    width: 100%;
+    display: flex;
+}
+
+
+.line{
+    display: flex;
+    color: #ADBDCB;
+    width: 100%;
+}
+
+.number{
+    color: #607B96;
+    text-align:  right;
+    padding-left: 75px;
+    padding-right: 16px;
+    border-right-color: var(--corBorda);
+    border-right-width: 2px;
+    border-right-style: solid;
+    width: 101px;
+    padding-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.code{
+    padding-left: 16px;
+    padding-top: 8px;
+    font-size: 1.2em ;
+}
+.code > span{
+    font-size: 1.2em;
+}
+
+.indent > .code{
+    padding-left: 0;
+    padding-top: 8px;
+    font-size: 1.2em;
+}
+.indent{
+    padding-left: 2em;
+}
+
+.lf-border{
+    border-left-color: var(--corBorda);
+    border-left-width: 2px;
+    border-left-style: solid;
+}
+
+#textoBemVindo{
+    font-size: 1.5em;
+    font-weight: 450;
+    
+}
+
+#textoMeuNome{
+    font-size: 3.5em;
+    font-weight: 480;
+}
+
+#textoDesenv{
+    color: #4D5BCE;
+    font-weight: 450;
+    font-size: 2.1em;
+}
+
+
+.footer{
+    width: 100%;
+    flex: 0 1 38px;
+    display: flex;
+    border-top-style: solid;
+    border-top-color: var(--corBorda);
+    border-top-width: 2px;
+    font-size: 16px;
+}
+
+.item-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 48px;
+    color: #607B96;
+    border-right-color: var(--corBorda);
+    border-right-width: 2px;
+    border-right-style: solid;
+}
+
+.item-footer.hover:hover{
+    color: white;
+    border-right-color: white;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-left-color: white;
+    border-left-width: 2px;
+    border-left-style: solid;
+}
+
+.item-footer.ml-auto{
+    border-left-color: var(--corBorda);
+    border-left-width: 2px;
+    border-left-style: solid;
+}
+
+a.item-footer{
+    text-decoration: none !important;
+}
+
+
+
+.mainCodigos{
+    width: 50%;
+}
+
+.mainImagemLateral{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imgJavaLogo{
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+
+#mainSobreMim{
+    width: 100%;
+    display: flex;
+}
+
+
+#conteudoSobreMim{
+    width: 85%;
+}
+
+#menuLateral{
+    display: flex;
+    width:20%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+#menuLateral > div{
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--corBordaCinza);
+}
+
+.item-menu{
+    width: 100%;
+    height: fit-content;
+    padding: 0.8em;
+    color: #607B96;
+    font-size: 1.1em;
+}
+
+.item-menu > .item-menu {
+    padding-top: 0.5em;
+    padding-bottom: 0.1em;
+    padding-left: 1.5em;
+}
+
+#menuInformacoes{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1.8em;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--corBordaCinza);
+}
+
+#menuInformacoes > .item-menu {
+    padding-top: 0.7em;
+    padding-bottom: 0.2em;
+    padding-left: 1.5em;
+}
+
+.item-menu > .item-menu {
+    display: none;
+}
+
+.dropped > .item-menu{
+    display: block !important;
+}
+
+.opened{
+    font-weight: bold;
+    color: white;
+}
+
+
+@media screen and (max-width:1440px) {
+    .top-navbar{
+        font-size: 0.9em;
+    }
+    .item-navbar{
+        padding: 6px 32px;
+    }
+
+    .code{
+        font-size: 0.9em;
+    }
+
+    .code > span{
+        font-size: 0.9em;
+    }
+
+    .indent > .code{
+        font-size: 0.9em;
+    }
+
+    #textoBemVindo{
+        font-size: 0.9em;
+    }
+
+    #textoMeuNome{
+        font-size: 1.2em;
+    }
+
+    #textoDesenv{
+        font-size: 1.1em;
+    }
+
+    .md-hidden{
+        display: none !important;
+    }
+
+    .item-menu{
+        font-size: 0.8em;
+    }
+    
+    #menuInformacoes {
+        padding-left: 0.9em;
+    }
+
+    #menuInformacoes > .item-menu{
+        padding-left: 0.5em;
+    }
+
+    #imgJavaLogo{
+        height: 350px;
+    }
+    .mainCodigos{
+        width: 60%;
+    }
+    .mainImagemLateral{
+        width: 40%;
+    }
+}
