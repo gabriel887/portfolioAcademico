@@ -361,10 +361,6 @@ a.item-footer{
         font-size: 1.1em;
     }
 
-    .md-hidden{
-        display: none !important;
-    }
-
     .item-menu{
         font-size: 0.8em;
     }
@@ -385,5 +381,11 @@ a.item-footer{
     }
     .mainImagemLateral{
         width: 40%;
+    }
+}
+
+@media (max-heigth: 600px){
+    .md-hidden{
+        display: none !important;
     }
 }
