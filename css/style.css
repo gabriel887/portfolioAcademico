@@ -25,10 +25,13 @@
     background-color: #1E1F22;
 }
 
+.orange{
+    color: #D67C32;
+}
+
 .t-orange{
     color: #D67C32;
-    font-family: Courier Prime;
-    font-size: 16px;
+    font-size: 1em;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -78,10 +81,10 @@
 }
 
 .top-navbar{
-    flex: 0 1 auto;
+    flex: 0 1 48px;
     width: 100%;
+    min-height: 48px;
     display: flex;
-    height: 72px;
     border-bottom-style: solid;
     border-bottom-color: var(--corBorda);
     border-bottom-width: 2px;
@@ -152,15 +155,16 @@
     padding-top: 8px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .code{
     padding-left: 16px;
     padding-top: 8px;
-    font-size: 1.2em ;
-}
-.code > span{
     font-size: 1.2em;
+}
+.code > span, .code > label{
+    font-size: 1.2em !important;
 }
 
 .indent > .code{
@@ -179,28 +183,28 @@
 }
 
 #textoBemVindo{
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: 450;
     
 }
 
 #textoMeuNome{
-    font-size: 3.5em;
+    font-size: 2.7em;
     font-weight: 480;
 }
 
 #textoDesenv{
     color: #4D5BCE;
     font-weight: 450;
-    font-size: 2.1em;
+    font-size: 1.6em;
 }
 
 
 .footer{
     width: 100%;
-    flex: 0 1 68px;
+    flex: 0 1 38px;
+    min-height: 38px;
     display: flex;
-    height: 68px;
     border-top-style: solid;
     border-top-color: var(--corBorda);
     border-top-width: 2px;
@@ -270,7 +274,7 @@ a.item-footer{
 
 #menuLateral{
     display: flex;
-    width:15%;
+    width:20%;
     flex-wrap: wrap;
     align-content: flex-start;
 }
@@ -346,15 +350,15 @@ a.item-footer{
     }
 
     #textoBemVindo{
-        font-size: 1.1em;
+        font-size: 0.9em;
     }
 
     #textoMeuNome{
-        font-size: 1.6em;
+        font-size: 1.2em;
     }
 
     #textoDesenv{
-        font-size: 1.4em;
+        font-size: 1.1em;
     }
 
     .md-hidden{
@@ -371,5 +375,15 @@ a.item-footer{
 
     #menuInformacoes > .item-menu{
         padding-left: 0.5em;
+    }
+
+    #imgJavaLogo{
+        height: 350px;
+    }
+    .mainCodigos{
+        width: 60%;
+    }
+    .mainImagemLateral{
+        width: 40%;
     }
 }

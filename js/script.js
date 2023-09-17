@@ -3,6 +3,9 @@ $(document).ready(function (){
 
     $(".item-navbar").click(trocaPagina);
     $(".dropdownMenu").click(mexeDropDown);
+    $(".menuPrincipal").click(mostraMenuPrincipal);
+
+    popularNumeracao();
 });
 
 
@@ -40,5 +43,34 @@ function mexeDropDown(){
     }
 }
 
+function mostraMenuPrincipal(){
+    let idDiv = $(this).attr("data-menuLink");
+    var label = $(this).find("label");
+    var i = label.find("i").first();
+    if($(this).hasClass("opened")){
+        $(this).removeClass("opened");
+        i.removeClass("fa-sort-down");
+        i.addClass("fa-caret-right");
+        $("#"+idDiv).addClass("hidden");
+    }else{
+        $(this).addClass("opened");
+        i.addClass("fa-sort-down");
+        i.removeClass("fa-caret-right");
+        $("#"+idDiv).removeClass("hidden");
+    }
+}
+
+function popularNumeracao(){
+    let i = 1;
+    $(".number").each(function(){
+        let divNumber = $(this);
+        if(divNumber.parent().css("display") !== 'none'){
+            divNumber.text(i);
+            i++;
+        }
+    });
+}
+
 //fa-caret-right seta pra direita
 //sort-down seta pa baxo
+// &nbsp; espaço
