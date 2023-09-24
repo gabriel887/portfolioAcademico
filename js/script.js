@@ -2,7 +2,7 @@
 $(document).ready(function (){
 
     $(".item-navbar").click(trocaPagina);
-    $(".dropdownMenu").click(mexeDropDown);
+    $(".dropdownMenu > label").click(mexeDropDown);
     $(".menuPrincipal").click(mostraMenuPrincipal);
 
     popularNumeracao();
@@ -28,18 +28,19 @@ function trocaPagina(){
 }
 
 function mexeDropDown(){
-    var label = $(this).find("label");
+    var label = $(this);
+    var divPai = $(this).parent();
     var i = label.find("i").first();
     if(i.hasClass("fa-caret-right")){
         i.addClass("fa-sort-down");
         i.removeClass("fa-caret-right");
-        $(this).addClass("dropped");
-        $(this).addClass("opened");
+        divPai.addClass("dropped");
+        divPai.addClass("opened");
     } else {
         i.removeClass("fa-sort-down");
         i.addClass("fa-caret-right");
-        $(this).removeClass("dropped");
-        $(this).removeClass("opened");
+        divPai.removeClass("dropped");
+        divPai.removeClass("opened");
     }
 }
 
