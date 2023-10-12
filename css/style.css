@@ -421,6 +421,7 @@ a.item-footer{
 #divAbas{
     display: flex;
     flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 /* menu abas */
@@ -434,6 +435,7 @@ a.item-footer{
     border-top-width: 0;
     
 }
+
 
 .menuAba{
     font-size: 1.2em;
@@ -469,4 +471,32 @@ a.item-footer{
 
 .aba{
     width: 100%;
+}
+
+.aba .number{
+    padding-left: 15px;
+    padding-right: 26px;
+    width: 55px;
+    position: relative;
+}
+
+.comentario{
+    color: #838383;
+}
+
+.textoFolded{
+    background-color: #83838354;
+    cursor: pointer;
+}
+.textoFolded:hover{
+    background-color: #d4d4d454;
+}
+
+.iconesSetas{
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
+.iconesSetas:hover{
+    color: #99c9f9;
 }
