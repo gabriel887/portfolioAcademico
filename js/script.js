@@ -5,8 +5,9 @@ $(document).ready(function (){
     $(".dropdownMenu > label").click(mexeDropDown);
     $(".menuPrincipal").click(mostraMenuPrincipal);
     $(".setaBaixoHide").click(toggleEditorFoldSetaBaixo);
+    $(".setaCimaHide").click(toggleEditorFoldSetaCima);
     $(".code").on("click", ".textoFolded", toggleEditorFoldTextoFolded);
-
+    
     popularNumeracaoAba();
     popularNumeracao();
 });
@@ -62,6 +63,7 @@ function mostraMenuPrincipal(){
         i.removeClass("fa-caret-right");
         $("#"+idDiv).removeClass("hidden");
     }
+    
 }
 
 function popularNumeracao(){
@@ -99,7 +101,7 @@ function toggleEditorFoldSetaBaixo() {
         var divSetaCima = $(this).parent().nextAll(':has(.setaCimaHide):first');
         $(this).parent().nextUntil(divSetaCima).add(divSetaCima).show();
         let texto = $(this).next().text();
-        $(this).next().html(`<label class="comentario">&lt;editor-fold desc="` + texto + ` "&gt;</label> `);
+        $(this).next().html(`<label class="comentario">&lt;editor-fold desc="` + texto + `"&gt;</label>`);
     }else{
         $(this).addClass("escondido");
         var divSetaCima = $(this).parent().nextAll(':has(.setaCimaHide):first');
@@ -107,7 +109,7 @@ function toggleEditorFoldSetaBaixo() {
         let texto = $(this).next().text();
         texto = texto.substr(texto.indexOf('"')+1);
         texto = texto.substr(0,texto.indexOf('"'));
-        $(this).next().html(`<label class="comentario textoFolded">` + texto + `</label> `);
+        $(this).next().html(`<label class="comentario textoFolded">` + texto + `</label>`);
     }
 }
 
@@ -119,7 +121,7 @@ function toggleEditorFoldTextoFolded() {
         var divSetaCima = divNumber.parent().nextAll(':has(.setaCimaHide):first');
         divNumber.parent().nextUntil(divSetaCima).add(divSetaCima).show();
         let texto = divNumber.next().text();
-        divNumber.next().html(`<label class="comentario">&lt;editor-fold desc="` + texto + ` "&gt;</label> `);
+        divNumber.next().html(`<label class="comentario">&lt;editor-fold desc="` + texto + `"&gt;</label>`);
     }else{
         divNumber.addClass("escondido");
         var divSetaCima = divNumber.parent().nextAll(':has(.setaCimaHide):first');
@@ -127,9 +129,25 @@ function toggleEditorFoldTextoFolded() {
         let texto = divNumber.next().text();
         texto = texto.substr(texto.indexOf('"')+1);
         texto = texto.substr(0,texto.indexOf('"'));
-        divNumber.next().html(`<label class="comentario textoFolded">` + texto + `</label> `);
+        divNumber.next().html(`<label class="comentario textoFolded">` + texto + `</label>`);
     }
 }
+
+function toggleEditorFoldSetaCima() {
+    let divSetaBaixo = $(this).parent().prevAll(':has(.setaBaixoHide):first');
+    divSetaBaixo.find(".number").addClass("escondido");
+    $(this).parent().prevUntil(divSetaBaixo).hide();
+    $(this).parent().hide();
+    divSetaBaixo.show();
+    let texto = divSetaBaixo.find(".code").text();
+    texto = texto.substr(texto.indexOf('"')+1);
+    texto = texto.substr(0,texto.indexOf('"'));
+    console.log(texto);
+    divSetaBaixo.find(".code").html(`<label class="comentario textoFolded">` + texto + `</label>`);
+}
+
+
+
 //fa-caret-right seta pra direita
 //sort-down seta pa baxo
 // &nbsp; espaço

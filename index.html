@@ -179,7 +179,7 @@
                                 <i class="fa-solid fa-sort-down"></i></span> Informações</label>
                         </div>
                         <div id="menuInformacoes">
-                            <div class="item-menu openDiv" data-divId="biografia">
+                            <div class="item-menu openDiv opened" data-divId="biografia">
                                 <label><i class="fa-solid fa-caret-right"></i>
                                     <i class="orange fa-solid fa-folder"></i> Biografia</label>
                             </div>
@@ -230,37 +230,90 @@
                             </div>
                         </div>
                         <div class="aba" id="biografia">
-                            <div class="line">
-                                <div class="number"></div>
-                                <div class="code"><label class="comentario">/**</label></div>
+                            <div class="esquerdaBiografia">
+                                <div class="line">
+                                    <div class="number"></div>
+                                    <div class="code"><label class="comentario">/**</label></div>
+                                </div>
+                                <div class="line">
+                                    <div class="number setaBaixoHide"></div>
+                                    <div class="code"><label class="comentario">&lt;editor-fold desc="Quem sou"&gt;</label></div>
+                                </div>
+                                <div class="line">
+                                    <div class="number"></div>
+                                    <div class="code"><label class="comentario">Olá! Sou Gabriel Valentim de Oliveira, tenho 20 anos.</label></div>
+                                </div>
+                                <div class="line">
+                                    <div class="number setaCimaHide"></div>
+                                    <div class="code"><label class="comentario">&lt;/editor-fold&gt; </label></div>
+                                </div>
+                                <div class="line">
+                                    <div class="number"></div>
+                                    <div class="code"><label class="comentario"> </label></div>
+                                </div>
+                                <div class="line">
+                                    <div class="number setaBaixoHide"></div>
+                                    <div class="code"><label class="comentario">&lt;editor-fold desc="Quem sou"&gt;</label></div>
+                                </div>
+                                <div class="line">
+                                    <div class="number"></div>
+                                    <div class="code"><label class="comentario">Olá! Sou Gabriel Valentim de Oliveira, tenho 20 anos.</label></div>
+                                </div>
+                                <div class="line">
+                                    <div class="number setaCimaHide"></div>
+                                    <div class="code"><label class="comentario">&lt;/editor-fold&gt; </label></div>
+                                </div>
                             </div>
-                            <div class="line">
-                                <div class="number setaBaixoHide"></div>
-                                <div class="code"><label class="comentario">&lt;editor-fold desc="Quem sou" &gt;</label></div>
-                            </div>
-                            <div class="line">
-                                <div class="number"></div>
-                                <div class="code"><label class="comentario">Olá! Sou Gabriel Valentim de Oliveira, tenho 20 anos.</label></div>
-                            </div>
-                            <div class="line">
-                                <div class="number setaCimaHide"></div>
-                                <div class="code"><label class="comentario">&lt;/editor-fold&gt; </label></div>
-                            </div>
-                            <div class="line">
-                                <div class="number"></div>
-                                <div class="code"><label class="comentario"> </label></div>
-                            </div>
-                            <div class="line">
-                                <div class="number setaBaixoHide"></div>
-                                <div class="code"><label class="comentario">&lt;editor-fold desc="Quem sou" &gt;</label></div>
-                            </div>
-                            <div class="line">
-                                <div class="number"></div>
-                                <div class="code"><label class="comentario">Olá! Sou Gabriel Valentim de Oliveira, tenho 20 anos.</label></div>
-                            </div>
-                            <div class="line">
-                                <div class="number setaCimaHide"></div>
-                                <div class="code"><label class="comentario">&lt;/editor-fold&gt; </label></div>
+                            <div class="direitaBiografia">
+                                <div id="snippetShowcase">
+                                    <div class="w100 mb-5">
+                                        <label class="comentario fs-5">//Empresas snippet showcase:</label>
+                                    </div>
+                                    <div class="divSnippet">
+                                        <div class="headerSnippet">
+                                            <div class="headerSnippetText">
+                                                <div class="headerSnippetImage">
+                                                    <img src="img/logoJC.png" alt="Logo da empresa JC Sistemas" >
+                                                </div>
+                                                <div>
+                                                    <label class="nomeEmpresa">@JCSistemas</label>
+                                                    <br/>
+                                                    <label class="comentario">Trabalhando desde 2021</label>
+                                                </div>
+                                            </div>
+                                            <div class="headerSnippetDetalhes">
+                                                <i class="fa-solid fa-circle-info"></i>
+                                                <label class="ml-1">Detalhes</label>
+                                            </div>
+                                        </div>
+                                        <div class="snippet">
+                                            <div class="dFlex">
+                                                <div class="w100">
+                                                    <label><span class="palavraReservada">function</span> <span class="palavraReservada">void</span> trabalhar() {</label>
+                                                </div>
+                                                <div class="w100 pl-1">
+                                                    <label><span class="classe">Funcionario</span> <span class="variavel">funcionario</span> = <span class="palavraReservada">new</span> <span class="classe">Funcionario</span>();</label>
+                                                </div>
+                                                <div class="w100 pl-1">
+                                                    <label><span class="variavel">funcionario</span>.setNome(<span class="string">"Gabriel Valentim de Oliveira"</span>);</label>
+                                                </div>
+                                                <div class="w100 pl-1">
+                                                    <label><span class="variavel">funcionario</span>.setDataInicio(LocalDate.of(<span class="numero">2021</span>, Month.<span class="constante">MARCH</span>, <span class="numero">1</span>));</label>
+                                                </div>
+                                                <div class="w100 pl-1">
+                                                    <label><span class="variavel">funcionario</span>.setDataTermino(LocalDate.now());</label>
+                                                </div>
+                                                <div class="w100 pl-1">
+                                                    <label><span class="variavel">funcionario</span>.setCargo(<span class="string">"Programador"</span>);</label>
+                                                </div>
+                                                <div class="w100">
+                                                    <label>}</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
                             </div>
                         </div>
                         <div class="aba" id="Conhecimento">
