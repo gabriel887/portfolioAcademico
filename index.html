@@ -1,344 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Gabriel</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
-    <script src="https://kit.fontawesome.com/27c2bc52fa.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/style.css"
+      media="screen"
+    />
+    <script
+      src="https://kit.fontawesome.com/27c2bc52fa.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/script.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="b-gray background">
-        <div class="b-black container">
-            <div class="top-navbar">
-                <div class="item-navbar">
-                    <label>gabriel_valentim</label>
-                </div>
-                <div class="item-navbar hover selected" data-linkMenu="mainBemVindo">
-                    <label>_bem-vindo</label>
-                </div>
-                <div class="item-navbar hover" data-linkMenu="mainSobreMim">
-                    <label>_sobre-mim</label>
-                </div>
-                <div class="item-navbar hover">
-                    <label>_projetos</label>
-                </div>
-                <div class="item-navbar ml-auto">
-                    <label>fatec</label>
-                </div>
-            </div>
-
-            <div id="main">
-                <div id="mainBemVindo" class="hidden">
-                    <div class="mainCodigos">
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="code"><label><span class="t-orange">import</span> javax.faces.bean.ManagedBean;</label> </div>
-                        </div>
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="code"><label><span class="t-orange">import</span> javax.faces.bean.SessionScoped;</label>  </div>
-                        </div>
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="code"> <span class="t-orange">import</span> java.io.Serializable; </div>
-                        </div>
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="code"> </div>
-                        </div>
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="code"><label><span class="t-yellow">@ManagedBean</span> ( name = <span class="t-green">"apresentacaoBean"</span>) </label></div>
-                        </div>
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="code"><span class="t-yellow">@SessionScoped</span> </div>
-                        </div>
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="code"><label> <span class="t-orange">public class</span> ApresentacaoBean <span class="t-orange">implements</span> Serializable {</label></div>
-                        </div>
-                        <div class="line sm-hidden">
-                            <div class="number"></div>
-                            <div class="code"> </div>
-                        </div>
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="indent">
-                                <div class="code"><label> <span class="t-orange">public String </span> darBoasVindas(){</label></div>
-                            </div>
-                        </div>
-                        <div class="line md-hidden sm-hidden">
-                            <div class="number"></div>
-                            <div class="indent">
-                                <div class="indent lf-border">
-                                    <div class="code">&nbsp;</div>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="indent">
-                                <div class="indent lf-border">
-                                    <div class="code"><label> <span class="t-lightGreen">/**</span></label></div>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="indent">
-                                <div class="indent lf-border">
-                                    <div class="code"><label id="textoBemVindo">Olá a todos! Sou,</label></div>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="indent">
-                                <div class="indent lf-border">
-                                    <div class="code"><label id="textoMeuNome">Gabriel Valentim</label></div>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="indent">
-                                <div class="indent lf-border">
-                                    <div class="code"><label id="textoDesenv">> Um Desenvolvedor Full-Stack</label></div>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="line md-hidden sm-hidden">
-                            <div class="number"></div>
-                            <div class="indent">
-                                <div class="indent lf-border">
-                                    <div class="code"><span class="t-lightGreen">* sou apaixonado por programação e seu raciocínio lógico.</span></div>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="indent">
-                                <div class="indent lf-border">
-                                    <div class="code"><span class="t-lightGreen">* veja mais sobre mim em meu portfólio. </span></div>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="indent">
-                                <div class="indent lf-border">
-                                    <div class="code"><span class="t-lightGreen">**/</span></div>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="line sm-hidden">
-                            <div class="number"></div>
-                            <div class="indent">
-                                <div class="indent lf-border">
-                                    <div class="code">&nbsp;</div>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="indent">
-                                <div class="code">}</div>
-                            </div>
-                        </div>
-                        <div class="line sm-hidden">
-                            <div class="number"></div>
-                            <div class="code"> </div>
-                        </div>
-                        <div class="line">
-                            <div class="number"></div>
-                            <div class="code">}</div>
-                        </div>
-                        <div class="line md-hidden sm-hidden">
-                            <div class="number"></div>
-                            <div class="code"> </div>
-                        </div>
-                        <div class="line md-hidden sm-hidden">
-                            <div class="number"></div>
-                            <div class="code"> </div>
-                        </div>
-                    </div>
-                    <div class="mainImagemLateral">
-                        <div class="imgDiv">
-                            <img id="imgJavaLogo" src="img/javaLogo.png" />
-                        </div>
-                    </div>
-                </div>
-                <div id="mainSobreMim">
-                    <div id="menuLateral">
-                        <div class="item-menu menuPrincipal opened" data-menuLink="menuInformacoes">
-                            <label><span class="">
-                                <i class="fa-solid fa-sort-down"></i></span> Informações</label>
-                        </div>
-                        <div id="menuInformacoes">
-                            <div class="item-menu openDiv opened" data-divId="biografia">
-                                <label><i class="fa-solid fa-caret-right"></i>
-                                    <i class="orange fa-solid fa-folder"></i> Biografia</label>
-                            </div>
-                            <div class="item-menu openDiv" data-divId="">
-                                <label>
-                                    <i class="fa-solid fa-caret-right"></i>
-                                    <i class="t-green fa-solid fa-folder"></i>
-                                     Conhecimentos</label>
-                            </div>
-                            <div class="item-menu dropdownMenu">
-                                <label>
-                                    <i class="fa-solid fa-caret-right"></i>
-                                    <i class="t-purple fa-solid fa-folder"></i>
-                                     Diploma</label>
-
-                                    <div class="item-menu openDiv" data-divId="">    
-                                        <label>
-                                            <i class="fa-solid fa-file-code"></i>
-                                            Escolaridade
-                                        </label>
-                                    </div>
-                                    <div class="item-menu openDiv" data-divId="">    
-                                       <label>
-                                           <i class="fa-solid fa-file-code"></i>
-                                           Cursos
-                                       </label>
-                                    </div>
-                            </div>
-                            <div class="item-menu">
-                            </div>
-                        </div>
-
-                        <div class="item-menu menuPrincipal" data-menuLink="menuContato">
-                            <label><span class="">
-                                <i class="fa-solid fa-caret-right"></i></span> Contato</label>
-                        </div>
-                        <div id="menuContato">
-
-                        </div>
-                    </div>
-                    <div id="divAbas">
-                        <div id="menuSuperiorAbas">
-                            <div class="menuAba ativo" id="menuAbaBiografia">
-                                <label>biografia.txt</label><i class="fa-solid fa-x"></i>
-                            </div>
-                            <div class="menuAba" id="menuAbaConhecimento">
-                                <label>Conhecimento</label><i class="fa-solid fa-x"></i>
-                            </div>
-                        </div>
-                        <div class="aba" id="biografia">
-                            <div class="esquerdaBiografia">
-                                <div class="line">
-                                    <div class="number"></div>
-                                    <div class="code"><label class="comentario">/**</label></div>
-                                </div>
-                                <div class="line">
-                                    <div class="number setaBaixoHide"></div>
-                                    <div class="code"><label class="comentario">&lt;editor-fold desc="Quem sou"&gt;</label></div>
-                                </div>
-                                <div class="line">
-                                    <div class="number"></div>
-                                    <div class="code"><label class="comentario">Olá! Sou Gabriel Valentim de Oliveira, tenho 20 anos.</label></div>
-                                </div>
-                                <div class="line">
-                                    <div class="number setaCimaHide"></div>
-                                    <div class="code"><label class="comentario">&lt;/editor-fold&gt; </label></div>
-                                </div>
-                                <div class="line">
-                                    <div class="number"></div>
-                                    <div class="code"><label class="comentario"> </label></div>
-                                </div>
-                                <div class="line">
-                                    <div class="number setaBaixoHide"></div>
-                                    <div class="code"><label class="comentario">&lt;editor-fold desc="Quem sou"&gt;</label></div>
-                                </div>
-                                <div class="line">
-                                    <div class="number"></div>
-                                    <div class="code"><label class="comentario">Olá! Sou Gabriel Valentim de Oliveira, tenho 20 anos.</label></div>
-                                </div>
-                                <div class="line">
-                                    <div class="number setaCimaHide"></div>
-                                    <div class="code"><label class="comentario">&lt;/editor-fold&gt; </label></div>
-                                </div>
-                            </div>
-                            <div class="direitaBiografia">
-                                <div id="snippetShowcase">
-                                    <div class="w100 mb-5">
-                                        <label class="comentario fs-5">//Empresas snippet showcase:</label>
-                                    </div>
-                                    <div class="divSnippet">
-                                        <div class="headerSnippet">
-                                            <div class="headerSnippetText">
-                                                <div class="headerSnippetImage">
-                                                    <img src="img/logoJC.png" alt="Logo da empresa JC Sistemas" >
-                                                </div>
-                                                <div>
-                                                    <label class="nomeEmpresa">@JCSistemas</label>
-                                                    <br/>
-                                                    <label class="comentario">Trabalhando desde 2021</label>
-                                                </div>
-                                            </div>
-                                            <div class="headerSnippetDetalhes">
-                                                <i class="fa-solid fa-circle-info"></i>
-                                                <label class="ml-1">Detalhes</label>
-                                            </div>
-                                        </div>
-                                        <div class="snippet">
-                                            <div class="dFlex">
-                                                <div class="w100">
-                                                    <label><span class="palavraReservada">function</span> <span class="palavraReservada">void</span> trabalhar() {</label>
-                                                </div>
-                                                <div class="w100 pl-1">
-                                                    <label><span class="classe">Funcionario</span> <span class="variavel">funcionario</span> = <span class="palavraReservada">new</span> <span class="classe">Funcionario</span>();</label>
-                                                </div>
-                                                <div class="w100 pl-1">
-                                                    <label><span class="variavel">funcionario</span>.setNome(<span class="string">"Gabriel Valentim de Oliveira"</span>);</label>
-                                                </div>
-                                                <div class="w100 pl-1">
-                                                    <label><span class="variavel">funcionario</span>.setDataInicio(LocalDate.of(<span class="numero">2021</span>, Month.<span class="constante">MARCH</span>, <span class="numero">1</span>));</label>
-                                                </div>
-                                                <div class="w100 pl-1">
-                                                    <label><span class="variavel">funcionario</span>.setDataTermino(LocalDate.now());</label>
-                                                </div>
-                                                <div class="w100 pl-1">
-                                                    <label><span class="variavel">funcionario</span>.setCargo(<span class="string">"Programador"</span>);</label>
-                                                </div>
-                                                <div class="w100">
-                                                    <label>}</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="aba" id="Conhecimento">
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-
-            <div class="footer">
-                <div class="item-footer">
-                    <label>siga-me:</label>
-                </div>
-                <a class="item-footer hover" href="https://www.facebook.com" target="_blank">
-                    <span><i class="fa-brands fa-facebook-f"></i></span>
-                </a>
-                <a class="item-footer hover" href="https://www.instagram.com" target="_blank">
-                    <span><i class="fa-brands fa-instagram"></i></span>
-                </a>
-                <a class="item-footer ml-auto hover" href="https://www.github.com" target="_blank">
-                    <label>@gabriel887&nbsp;</label>
-                    <span><i class="fa-brands fa-github"></i></span>
-                </a>
-            </div>
+      <div class="b-black container">
+        <div class="top-navbar">
+          <div class="item-navbar">
+            <label>gabriel_valentim</label>
+          </div>
+          <div class="item-navbar hover selected" data-linkMenu="mainBemVindo">
+            <label>_bem-vindo</label>
+          </div>
+          <div class="item-navbar hover" data-linkMenu="mainSobreMim">
+            <label>_sobre-mim</label>
+          </div>
+          <div class="item-navbar hover">
+            <label>_projetos</label>
+          </div>
+          <div class="item-navbar ml-auto">
+            <label>fatec</label>
+          </div>
         </div>
+
+        <div id="main">
+          <div id="mainBemVindo" class="hidden">
+            <div class="mainCodigos">
+              <div class="line">
+                <div class="number"></div>
+                <div class="code">
+                  <label
+                    ><span class="t-orange">import</span>
+                    javax.faces.bean.ManagedBean;</label
+                  >
+                </div>
+              </div>
+              <div class="line">
+                <div class="number"></div>
+                <div class="code">
+                  <label
+                    ><span class="t-orange">import</span>
+                    javax.faces.bean.SessionScoped;</label
+                  >
+                </div>
+              </div>
+              <div class="line">
+                <div class="number"></div>
+                <div class="code">
+                  <span class="t-orange">import</span> java.io.Serializable;
+                </div>
+              </div>
+              <div class="line md-hidden sm-hidden">
+                <div class="number"></div>
+                <div class="code"></div>
+              </div>
+              <div class="line">
+                <div class="number"></div>
+                <div class="code">
+                  <label
+                    ><span class="t-yellow">@ManagedBean</span> ( name =
+                    <span class="t-green">"apresentacaoBean"</span>)
+                  </label>
+                </div>
+              </div>
+              <div class="line">
+                <div class="number"></div>
+                <div class="code">
+                  <span class="t-yellow">@SessionScoped</span>
+                </div>
+              </div>
+              <div class="line">
+                <div class="number"></div>
+                <div class="code">
+                  <label>
+                    <span class="t-orange">public class</span> ApresentacaoBean
+                    <span class="t-orange">implements</span> Serializable
+                    {</label
+                  >
+                </div>
+              </div>
+              <div class="line sm-hidden">
+                <div class="number"></div>
+                <div class="code"></div>
+              </div>
+              <div class="line">
+                <div class="number"></div>
+                <div class="indent">
+                  <div class="code">
+                    <label>
+                      <span class="t-orange">public String </span>
+                      darBoasVindas(){</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="line md-hidden sm-hidden">
+                <div class="number"></div>
+                <div class="indent">
+                  <div class="indent lf-border">
+                    <div class="code">&nbsp;</div>
+                  </div>
+                </div>
+              </div>
+              <div class="line">
+                <div class="number"></div>
+                <div class="indent">
+                  <div class="indent lf-border">
+                    <div class="code">
+                      <label> <span class="t-lightGreen">/**</span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="line">
+                <div class="number"></div>
+                <div class="indent">
+                  <div class="indent lf-border">
+                    <div class="code">
+                      <label id="textoBemVindo">Olá a todos! Sou,</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="line">
+                <div class="number"></div>
+                <div class="indent">
+                  <div class="indent lf-border">
+                    <div class="code">
+                      <label id="textoMeuNome">Gabriel Valentim</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="line">
+                <div class="number"></div>
+                <div class="indent">
+                  <div class="indent lf-border">
+                    <div class="code">
+                      <label id="textoDesenv"
+                        >> Um Desenvolvedor Full-Stack</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="line md-hidden sm-hidden">
+                <div class="number"></div>
+                <div class="indent">
+                  <div class="indent lf-border">
+                    <div class="code">
+                      <span class="t-lightGreen"
+                        >* sou apaixonado por programação e seu raciocínio
+                        lógico.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="line">
+                <div class="number"></div>
+                <div class="indent">
+                  <div class="indent lf-border">
+                    <div class="code">
+                      <span class="t-lightGreen"
+                        >* veja mais sobre mim em meu portfólio.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="line">
+                <div class="number"></div>
+                <div class="indent">
+                  <div class="indent lf-border">
+                    <div class="code">
+                      <span class="t-lightGreen">**/</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="line sm-hidden">
+                <div class="number"></div>
+                <div class="indent">
+                  <div class="indent lf-border">
+                    <div class="code">&nbsp;</div>
+                  </div>
+                </div>
+              </div>
+              <div class="line">
+                <div class="number"></div>
+                <div class="indent">
+                  <div class="code">}</div>
+                </div>
+              </div>
+              <div class="line sm-hidden">
+                <div class="number"></div>
+                <div class="code"></div>
+              </div>
+              <div class="line">
+                <div class="number"></div>
+                <div class="code">}</div>
+              </div>
+              <div class="line md-hidden sm-hidden">
+                <div class="number"></div>
+                <div class="code"></div>
+              </div>
+              <div class="line md-hidden sm-hidden">
+                <div class="number"></div>
+                <div class="code"></div>
+              </div>
+            </div>
+            <div class="mainImagemLateral">
+              <div class="imgDiv">
+                <img id="imgJavaLogo" src="img/javaLogo.png" />
+              </div>
+            </div>
+          </div>
+          <div id="mainSobreMim">
+            <div id="menuLateral">
+              <div
+                class="item-menu menuPrincipal opened"
+                data-menuLink="menuInformacoes"
+              >
+                <label
+                  ><span class=""> <i class="fa-solid fa-sort-down"></i></span>
+                  Informações</label
+                >
+              </div>
+              <div id="menuInformacoes">
+                <div class="item-menu openDiv opened" data-divId="biografia">
+                  <label
+                    ><i class="fa-solid fa-caret-right"></i>
+                    <i class="orange fa-solid fa-folder"></i> Biografia</label
+                  >
+                </div>
+                <div class="item-menu openDiv" data-divId="">
+                  <label>
+                    <i class="fa-solid fa-caret-right"></i>
+                    <i class="t-green fa-solid fa-folder"></i>
+                    Conhecimentos</label
+                  >
+                </div>
+                <div class="item-menu dropdownMenu">
+                  <label>
+                    <i class="fa-solid fa-caret-right"></i>
+                    <i class="t-purple fa-solid fa-folder"></i>
+                    Diploma</label
+                  >
+
+                  <div class="item-menu openDiv" data-divId="">
+                    <label>
+                      <i class="fa-solid fa-file-code"></i>
+                      Escolaridade
+                    </label>
+                  </div>
+                  <div class="item-menu openDiv" data-divId="">
+                    <label>
+                      <i class="fa-solid fa-file-code"></i>
+                      Cursos
+                    </label>
+                  </div>
+                </div>
+                <div class="item-menu"></div>
+              </div>
+
+              <div class="item-menu menuPrincipal" data-menuLink="menuContato">
+                <label
+                  ><span class="">
+                    <i class="fa-solid fa-caret-right"></i
+                  ></span>
+                  Contato</label
+                >
+              </div>
+              <div id="menuContato"></div>
+            </div>
+            <div id="divAbas">
+              <div id="menuSuperiorAbas">
+                <div class="menuAba ativo" id="menuAbaBiografia">
+                  <label>biografia.txt</label><i class="fa-solid fa-x"></i>
+                </div>
+                <div class="menuAba" id="menuAbaConhecimento">
+                  <label>Conhecimento</label><i class="fa-solid fa-x"></i>
+                </div>
+              </div>
+              <div class="aba" id="biografia">
+                <div class="esquerdaBiografia">
+                  <div class="line">
+                    <div class="number"></div>
+                    <div class="code">
+                      <label class="comentario">/**</label>
+                    </div>
+                  </div>
+                  <div class="line">
+                    <div class="number setaBaixoHide"></div>
+                    <div class="code">
+                      <label class="comentario"
+                        >&lt;editor-fold desc="Quem sou"&gt;</label
+                      >
+                    </div>
+                  </div>
+                  <div class="line">
+                    <div class="number"></div>
+                    <div class="code">
+                      <label class="comentario"
+                        >Olá! Sou Gabriel Valentim de Oliveira, tenho 20
+                        anos.</label
+                      >
+                    </div>
+                  </div>
+                  <div class="line">
+                    <div class="number"></div>
+                    <div class="code">
+                      <label class="comentario">Otestes </label>
+                    </div>
+                  </div>
+                  <div class="line">
+                    <div class="number"></div>
+                    <div class="code">
+                      <label class="comentario">aedaded</label>
+                    </div>
+                  </div>
+                  <div class="line">
+                    <div class="number setaCimaHide"></div>
+                    <div class="code">
+                      <label class="comentario">&lt;/editor-fold&gt; </label>
+                    </div>
+                  </div>
+                  <div class="line">
+                    <div class="number"></div>
+                    <div class="code"><label class="comentario"> </label></div>
+                  </div>
+                  <div class="line">
+                    <div class="number setaBaixoHide"></div>
+                    <div class="code">
+                      <label class="comentario"
+                        >&lt;editor-fold desc="Quem sou"&gt;</label
+                      >
+                    </div>
+                  </div>
+                  <div class="line">
+                    <div class="number"></div>
+                    <div class="code">
+                      <label class="comentario"
+                        >Olá! Sou Gabriel Valentim de Oliveira, tenho 20
+                        anos.</label
+                      >
+                    </div>
+                  </div>
+                  <div class="line">
+                    <div class="number setaCimaHide"></div>
+                    <div class="code">
+                      <label class="comentario">&lt;/editor-fold&gt; </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="direitaBiografia">
+                  <div id="snippetShowcase">
+                    <div class="w100 mb-5">
+                      <label class="comentario fs-3"
+                        >//Empresas snippet showcase:</label
+                      >
+                    </div>
+                    <div class="divSnippet">
+                      <div class="headerSnippet">
+                        <div class="headerSnippetText">
+                          <div class="headerSnippetImage">
+                            <img
+                              src="img/logoJC.png"
+                              alt="Logo da empresa JC Sistemas"
+                            />
+                          </div>
+                          <div>
+                            <label class="nomeEmpresa">@JCSistemas</label>
+                            <br />
+                            <label class="comentario"
+                              >Trabalhando desde 2021</label
+                            >
+                          </div>
+                        </div>
+                        <div class="headerSnippetDetalhes">
+                          <i class="fa-solid fa-circle-info"></i>
+                          <label class="ml-1">Detalhes</label>
+                        </div>
+                      </div>
+                      <div class="snippet">
+                        <div class="dFlex">
+                          <div class="w100">
+                            <label
+                              ><span class="palavraReservada">function</span>
+                              <span class="palavraReservada">void</span>
+                              trabalhar() {</label
+                            >
+                          </div>
+                          <div class="w100 pl-1">
+                            <label
+                              ><span class="classe">Funcionario</span>
+                              <span class="variavel">funcionario</span> =
+                              <span class="palavraReservada">new</span>
+                              <span class="classe">Funcionario</span>();</label
+                            >
+                          </div>
+                          <div class="w100 pl-1">
+                            <label>
+                                <span class="variavel">funcionario</span>.setNome(<span class="string"
+                                >"Gabriel Valentim de Oliveira"</span
+                              >);</label
+                            >
+                          </div>
+                          <div class="w100 pl-1">
+                            <label
+                              ><span class="variavel">funcionario</span
+                              >.setDataInicio(LocalDate.of(<span class="numero"
+                                >2021</span
+                              >, Month.<span class="constante">MARCH</span>,
+                              <span class="numero">1</span>));</label
+                            >
+                          </div>
+                          <div class="w100 pl-1">
+                            <label
+                              ><span class="variavel">funcionario</span
+                              >.setDataTermino(<span class="palavraReservada"
+                                >null</span
+                              >);</label
+                            >
+                          </div>
+                          <div class="w100 pl-1">
+                            <label
+                              ><span class="variavel">funcionario</span
+                              >.setCargo(<span class="string"
+                                >"Programador"</span
+                              >);</label
+                            >
+                          </div>
+                          <div class="w100">
+                            <label>}</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="detalhesSnippet esconder hidden">
+                        <div class="detalhesSuperior">
+                          <div>
+                            <i class="fa-solid fa-circle-info"></i>
+                            <label class="ml-1">Detalhes</label>
+                          </div>
+                          <div class="buttonClose">
+                            <i class="fa-solid fa-x"></i>
+                          </div>
+                        </div>
+                        <div class="detalhesConteudo">
+                          <label
+                            >Iniciei na empresa em março de 2021, como
+                            estagiário de programação, trabalhando com JSP e
+                            JSF, até ser contratado em 2023 como um
+                            programador.</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="aba" id="Conhecimento"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="item-footer">
+            <label>siga-me:</label>
+          </div>
+          <a
+            class="item-footer hover"
+            href="https://www.facebook.com"
+            target="_blank"
+          >
+            <span><i class="fa-brands fa-facebook-f"></i></span>
+          </a>
+          <a
+            class="item-footer hover"
+            href="https://www.instagram.com"
+            target="_blank"
+          >
+            <span><i class="fa-brands fa-instagram"></i></span>
+          </a>
+          <a
+            class="item-footer ml-auto hover"
+            href="https://www.github.com"
+            target="_blank"
+          >
+            <label>@gabriel887&nbsp;</label>
+            <span><i class="fa-brands fa-github"></i></span>
+          </a>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

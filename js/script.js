@@ -6,6 +6,8 @@ $(document).ready(function (){
     $(".menuPrincipal").click(mostraMenuPrincipal);
     $(".setaBaixoHide").click(toggleEditorFoldSetaBaixo);
     $(".setaCimaHide").click(toggleEditorFoldSetaCima);
+    $(".detalhesSuperior .buttonClose").click(fecharDetalhesSnippets);
+    $(".headerSnippetDetalhes").click(abrirDetalhesSnippets);
     $(".code").on("click", ".textoFolded", toggleEditorFoldTextoFolded);
     
     popularNumeracaoAba();
@@ -146,6 +148,27 @@ function toggleEditorFoldSetaCima() {
     divSetaBaixo.find(".code").html(`<label class="comentario textoFolded">` + texto + `</label>`);
 }
 
+function fecharDetalhesSnippets(){
+    $(this).parent().parent().addClass("hidden");
+}
+function abrirDetalhesSnippets(){
+    let div = $(this).parent().parent().find(".detalhesSnippet");
+    if(div.hasClass("hidden")){
+        div.addClass("esconder"); 
+        div.removeClass("hidden"); 
+        setTimeout(() => {
+            div.removeClass("esconder"); 
+            div.addClass("mostrar"); 
+        }, 100);
+        
+    }else{
+        div.addClass("esconder"); 
+        div.removeClass("mostrar");
+        setTimeout(() => {
+            div.addClass("hidden"); 
+        }, 1500); 
+    }
+}
 
 
 //fa-caret-right seta pra direita
