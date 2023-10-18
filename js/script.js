@@ -9,6 +9,16 @@ $(document).ready(function (){
     $(".detalhesSuperior .buttonClose").click(fecharDetalhesSnippets);
     $(".headerSnippetDetalhes").click(abrirDetalhesSnippets);
     $(".code").on("click", ".textoFolded", toggleEditorFoldTextoFolded);
+    $(".menuAba").click(mexeMenuAba);
+
+    
+    $(".setaBaixoHide").each(function (){
+        let divComentario = $(this).parent().find(".comentario");
+        console.log(divComentario);
+        if(divComentario.text().includes("defaultstate")){
+            encolheDefaultState(divComentario);
+        }
+    });
     
     popularNumeracaoAba();
     popularNumeracao();
@@ -94,6 +104,20 @@ function popularNumeracaoAba(){
             divNumber.append(`<i class="fa-solid fa-angle-down iconesSetas"> </i>`); 
         }
     });
+    i = 1;
+    $("#conhecimento .number").each(function(){
+        let divNumber = $(this);
+        if(divNumber.parent().css("display") !== 'none'){
+            divNumber.append("<label>" + i + "</label>");
+            i++;
+        }
+        if(divNumber.hasClass("setaCimaHide")){
+            divNumber.append(`<i class="fa-solid fa-angle-up iconesSetas"> </i>`); 
+        }
+        if(divNumber.hasClass("setaBaixoHide")){
+            divNumber.append(`<i class="fa-solid fa-angle-down iconesSetas"> </i>`); 
+        }
+    });
 }
 
 function toggleEditorFoldSetaBaixo() {
@@ -103,15 +127,17 @@ function toggleEditorFoldSetaBaixo() {
         var divSetaCima = $(this).parent().nextAll(':has(.setaCimaHide):first');
         $(this).parent().nextUntil(divSetaCima).add(divSetaCima).show();
         let texto = $(this).next().text();
-        $(this).next().html(`<label class="comentario">&lt;editor-fold desc="` + texto + `"&gt;</label>`);
+        let defaultstate = $(this).next().find(".comentario:first").attr("data-defaultstate");
+        $(this).next().html(`<label class="comentario">&lt;editor-fold desc="` + texto + `" ${(defaultstate == '' ? "" : "defaultstate=\""+defaultstate+"\"")} &gt;</label>`);
     }else{
         $(this).addClass("escondido");
         var divSetaCima = $(this).parent().nextAll(':has(.setaCimaHide):first');
         $(this).parent().nextUntil(divSetaCima).add(divSetaCima).hide();
         let texto = $(this).next().text();
+        let defaultstate = texto.includes("defaultstate") ? " data-defaultstate=\"collapsed\" " : "" ;
         texto = texto.substr(texto.indexOf('"')+1);
         texto = texto.substr(0,texto.indexOf('"'));
-        $(this).next().html(`<label class="comentario textoFolded">` + texto + `</label>`);
+        $(this).next().html(`<label class="comentario textoFolded" ${defaultstate}>` + texto + `</label>`);
     }
 }
 
@@ -123,15 +149,18 @@ function toggleEditorFoldTextoFolded() {
         var divSetaCima = divNumber.parent().nextAll(':has(.setaCimaHide):first');
         divNumber.parent().nextUntil(divSetaCima).add(divSetaCima).show();
         let texto = divNumber.next().text();
-        divNumber.next().html(`<label class="comentario">&lt;editor-fold desc="` + texto + `"&gt;</label>`);
+        let defaultstate = divNumber.next().find(".comentario:first").attr("data-defaultstate");
+        divNumber.next().html(`<label class="comentario">&lt;editor-fold desc="` + texto + `" ${(defaultstate == '' ? "" : "defaultstate=\""+defaultstate+"\"")} &gt;</label>`);
+    
     }else{
         divNumber.addClass("escondido");
         var divSetaCima = divNumber.parent().nextAll(':has(.setaCimaHide):first');
         divNumber.parent().nextUntil(divSetaCima).add(divSetaCima).hide();
         let texto = divNumber.next().text();
+        let defaultstate = texto.includes("defaultstate") ? " data-defaultstate=\"collapsed\" " : "" ;
         texto = texto.substr(texto.indexOf('"')+1);
         texto = texto.substr(0,texto.indexOf('"'));
-        divNumber.next().html(`<label class="comentario textoFolded">` + texto + `</label>`);
+        divNumber.next().html(`<label class="comentario textoFolded ${defaultstate}">` + texto + `</label>`);
     }
 }
 
@@ -142,12 +171,22 @@ function toggleEditorFoldSetaCima() {
     $(this).parent().hide();
     divSetaBaixo.show();
     let texto = divSetaBaixo.find(".code").text();
+    let defaultstate = texto.includes("defaultstate") ? " data-defaultstate=\"collapsed\" " : "" ;
     texto = texto.substr(texto.indexOf('"')+1);
     texto = texto.substr(0,texto.indexOf('"'));
-    console.log(texto);
-    divSetaBaixo.find(".code").html(`<label class="comentario textoFolded">` + texto + `</label>`);
+    divSetaBaixo.find(".code").html(`<label class="comentario textoFolded" ${defaultstate}>` + texto + `</label>`);
 }
 
+function encolheDefaultState(elemento) {
+    elemento.addClass("escondido");
+    var divSetaCima = elemento.parent().nextAll(':has(.setaCimaHide):first');
+    elemento.parent().nextUntil(divSetaCima).add(divSetaCima).hide();
+    let texto = elemento.next().text();
+    let defaultstate = texto.includes("defaultstate") ? " data-defaultstate=\"collapsed\" " : "" ;
+    texto = texto.substr(texto.indexOf('"')+1);
+    texto = texto.substr(0,texto.indexOf('"'));
+    elemento.next().html(`<label class="comentario textoFolded ${defaultstate}">` + texto + `</label>`);
+}
 function fecharDetalhesSnippets(){
     $(this).parent().parent().addClass("hidden");
 }
@@ -168,6 +207,14 @@ function abrirDetalhesSnippets(){
             div.addClass("hidden"); 
         }, 1500); 
     }
+}
+
+function mexeMenuAba(){
+    $(this).parent().find(".ativo").removeClass("ativo");
+    $(this).addClass("ativo");
+    let div = $(this).attr("data-id");
+    $("#"+div).parent().find(".aba").addClass("hidden");
+    $("#"+div).removeClass("hidden");
 }
 
 
