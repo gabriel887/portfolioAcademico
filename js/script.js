@@ -1,22 +1,25 @@
-
+var arrayAbas;
+var arrayMenuAbas;
 $(document).ready(function (){
-
-    $(".item-navbar").click(trocaPagina);
-    $(".dropdownMenu > label").click(mexeDropDown);
-    $(".menuPrincipal").click(mostraMenuPrincipal);
-    $(".setaBaixoHide").click(toggleEditorFoldSetaBaixo);
-    $(".setaCimaHide").click(toggleEditorFoldSetaCima);
-    $(".detalhesSuperior .buttonClose").click(fecharDetalhesSnippets);
-    $(".headerSnippetDetalhes").click(abrirDetalhesSnippets);
+    arrayAbas = $(".aba");
+    arrayMenuAbas = $(".menuAba");
+    $("body").on("click", ".textoFolded", toggleEditorFoldTextoFolded);
+    $("body").on("click", ".item-navbar", trocaPagina);
+    $("body").on("click", ".dropdownMenu > label", mexeDropDown);
+    $("body").on("click", ".menuPrincipal", mostraMenuPrincipal);
+    $("body").on("click", ".setaBaixoHide", toggleEditorFoldSetaBaixo);
+    $("body").on("click", ".setaCimaHide", toggleEditorFoldSetaCima);
+    $("body").on("click", ".detalhesSuperior .buttonClose", fecharDetalhesSnippets);
+    $("body").on("click", ".headerSnippetDetalhes", abrirDetalhesSnippets);
     $(".code").on("click", ".textoFolded", toggleEditorFoldTextoFolded);
-    $(".menuAba").click(mexeMenuAba);
-
+    $("body").on("click", ".menuAba", mexeMenuAba);
+    $("body").on("click", ".openDiv", openAba);
+    $("body").on("click", ".menuAba i", fechaAba);
     
     $(".setaBaixoHide").each(function (){
         let divComentario = $(this).parent().find(".comentario");
-        console.log(divComentario);
         if(divComentario.text().includes("defaultstate")){
-            encolheDefaultState(divComentario);
+            encolheDefaultState($(this));
         }
     });
     
@@ -80,7 +83,7 @@ function mostraMenuPrincipal(){
 
 function popularNumeracao(){
     let i = 1;
-    $("#mainBemVindo .number").each(function(){
+    $("bodyBemVindo .number").each(function(){
         let divNumber = $(this);
         if(divNumber.parent().css("display") !== 'none'){
             divNumber.text(i);
@@ -128,7 +131,7 @@ function toggleEditorFoldSetaBaixo() {
         $(this).parent().nextUntil(divSetaCima).add(divSetaCima).show();
         let texto = $(this).next().text();
         let defaultstate = $(this).next().find(".comentario:first").attr("data-defaultstate");
-        $(this).next().html(`<label class="comentario">&lt;editor-fold desc="` + texto + `" ${(defaultstate == '' ? "" : "defaultstate=\""+defaultstate+"\"")} &gt;</label>`);
+        $(this).next().html(`<label class="comentario">&lt;editor-fold desc="` + texto + `" ${(defaultstate == '' || defaultstate == undefined ? "" : "defaultstate=\""+defaultstate+"\"")} &gt;</label>`);
     }else{
         $(this).addClass("escondido");
         var divSetaCima = $(this).parent().nextAll(':has(.setaCimaHide):first');
@@ -150,7 +153,7 @@ function toggleEditorFoldTextoFolded() {
         divNumber.parent().nextUntil(divSetaCima).add(divSetaCima).show();
         let texto = divNumber.next().text();
         let defaultstate = divNumber.next().find(".comentario:first").attr("data-defaultstate");
-        divNumber.next().html(`<label class="comentario">&lt;editor-fold desc="` + texto + `" ${(defaultstate == '' ? "" : "defaultstate=\""+defaultstate+"\"")} &gt;</label>`);
+        divNumber.next().html(`<label class="comentario">&lt;editor-fold desc="` + texto + `" ${(defaultstate == '' || defaultstate == undefined ? "" : "defaultstate=\""+defaultstate+"\"")} &gt;</label>`);
     
     }else{
         divNumber.addClass("escondido");
@@ -158,9 +161,10 @@ function toggleEditorFoldTextoFolded() {
         divNumber.parent().nextUntil(divSetaCima).add(divSetaCima).hide();
         let texto = divNumber.next().text();
         let defaultstate = texto.includes("defaultstate") ? " data-defaultstate=\"collapsed\" " : "" ;
+        console.log(texto.includes("defaultstate"));
         texto = texto.substr(texto.indexOf('"')+1);
         texto = texto.substr(0,texto.indexOf('"'));
-        divNumber.next().html(`<label class="comentario textoFolded ${defaultstate}">` + texto + `</label>`);
+        divNumber.next().html(`<label class="comentario textoFolded" ${defaultstate}>` + texto + `</label>`);
     }
 }
 
@@ -182,10 +186,9 @@ function encolheDefaultState(elemento) {
     var divSetaCima = elemento.parent().nextAll(':has(.setaCimaHide):first');
     elemento.parent().nextUntil(divSetaCima).add(divSetaCima).hide();
     let texto = elemento.next().text();
-    let defaultstate = texto.includes("defaultstate") ? " data-defaultstate=\"collapsed\" " : "" ;
     texto = texto.substr(texto.indexOf('"')+1);
     texto = texto.substr(0,texto.indexOf('"'));
-    elemento.next().html(`<label class="comentario textoFolded ${defaultstate}">` + texto + `</label>`);
+    elemento.next().html(`<label class="comentario textoFolded" data-defaultstate=\"collapsed\" >` + texto + `</label>`);
 }
 function fecharDetalhesSnippets(){
     $(this).parent().parent().addClass("hidden");
@@ -217,6 +220,82 @@ function mexeMenuAba(){
     $("#"+div).removeClass("hidden");
 }
 
+
+function getAbaById(id){
+    let aba;
+    arrayAbas.each(function (){
+        if($(this).attr("id") === id){
+            aba = $(this);
+        }
+    });
+    return aba;
+}
+function getMenuAbaById(id){
+    let menuAba;
+    arrayMenuAbas.each(function (){
+        if($(this).attr("data-id") === id){
+            menuAba = $(this);
+        }
+    });
+    return menuAba;
+}
+function openAba(){
+    let divItMenu = $(this);
+    let idDivAba = $(this).attr("data-divId");
+    let divAba = $("#"+idDivAba);
+    let divMenuAba = $(".menuAba[data-id='"+idDivAba+"']");
+
+    $(".menuAba").removeClass("ativo");
+    $("#menuInformacoes").find(".openDiv").removeClass("ativo");
+    divItMenu.addClass("ativo");
+    
+    if(!divItMenu.hasClass("opened")){
+        divItMenu.addClass("opened");
+        console.log(divAba);
+        if(divAba.length == 0){
+            divAba = getAbaById(idDivAba);
+            $("#divAbas").append(divAba);
+        }
+        console.log(divMenuAba);
+        if(divMenuAba.length == 0){
+            console.log("aa");
+            divMenuAba = getMenuAbaById(idDivAba);
+            console.log(divMenuAba);
+
+            $("#menuSuperiorAbas").append(divMenuAba);
+        }
+        
+    }
+    divAba.parent().find(".aba:not(.hidden)").addClass("hidden");
+    divAba.removeClass("hidden");
+    divMenuAba.addClass("ativo");
+}
+
+function fechaAba(){
+    let iconFecha = $(this);
+    let divSubItem = iconFecha.parent();
+    let idAba = divSubItem.attr("data-id");
+    let aba = $("#"+idAba);
+    let menuAba = $(".item-menu[data-divId=\""+idAba+"\"]");
+    if(menuAba.hasClass("ativo")){
+        menuAba.removeClass("ativo");
+    }
+    menuAba.removeClass("opened");
+    
+    divSubItem.remove();
+    aba.remove();
+    if(!aba.hasClass("hidden")){
+        let trocaAba = $(".aba:first");
+        console.log(trocaAba);
+        if(trocaAba!=undefined){
+            trocaAba.removeClass("hidden");
+            let idTrocaAba = trocaAba.attr("id");
+            $(".item-menu[data-divId=\""+idTrocaAba+"\"]").addClass("ativo");
+            $(".menuAba[data-id=\""+idTrocaAba+"\"]").addClass("ativo");
+        }
+    }
+    
+}
 
 //fa-caret-right seta pra direita
 //sort-down seta pa baxo

@@ -10,10 +10,8 @@
       href="css/style.css"
       media="screen"
     />
-    <script
-      src="https://kit.fontawesome.com/27c2bc52fa.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/27c2bc52fa.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/script.js"></script>
   </head>
@@ -243,13 +241,12 @@
                 >
               </div>
               <div id="menuInformacoes">
-                <div class="item-menu openDiv opened" data-divId="biografia">
+                <div class="item-menu openDiv ativo" data-divId="biografia">
                   <label
                     ><i class="fa-solid fa-caret-right"></i>
-                    <i class="orange fa-solid fa-folder"></i> Biografia</label
-                  >
+                    <i class="orange fa-solid fa-folder"></i> Biografia</label>
                 </div>
-                <div class="item-menu openDiv" data-divId="">
+                <div class="item-menu openDiv" data-divId="conhecimento">
                   <label>
                     <i class="fa-solid fa-caret-right"></i>
                     <i class="t-green fa-solid fa-folder"></i>
@@ -276,29 +273,44 @@
                     </label>
                   </div>
                 </div>
-                <div class="item-menu"></div>
               </div>
 
               <div class="item-menu menuPrincipal" data-menuLink="menuContato">
-                <label
-                  ><span class="">
-                    <i class="fa-solid fa-caret-right"></i
-                  ></span>
-                  Contato</label
-                >
+                <label>
+                    <i class="fa-solid fa-caret-right"></i>
+                  Contato</label>
               </div>
-              <div id="menuContato"></div>
+              <div id="menuContato">
+                <div class="item-menu">
+                  <div><label>
+                    <i class="fa-solid fa-envelope"></i> gabrielvalentim827@gmail.com
+                  </label></div>
+                </div>
+                <div class="item-menu">
+                  <div><label>
+                    <i class="fa-solid fa-phone"></i> (14) 99638-3496
+                  </label></div>
+                </div>
+                <div class="item-menu">
+                  <div><label>
+                    <i class="fa-brands fa-github"></i> @gabriel887
+                  </label></div>
+                </div>
+              </div>
+              
+
             </div>
+
             <div id="divAbas">
               <div id="menuSuperiorAbas">
-                <div class="menuAba ativo" data-id="biografia">
+                <div class="menuAba" data-id="biografia">
                   <label>biografia.txt</label><i class="fa-solid fa-x"></i>
                 </div>
                 <div class="menuAba" data-id="conhecimento">
-                  <label>Conhecimento</label><i class="fa-solid fa-x"></i>
+                  <label>conhecimento.txt</label><i class="fa-solid fa-x"></i>
                 </div>
               </div>
-              <div class="aba" id="biografia">
+              <div class="aba hidden" id="biografia">
                 <div class="esquerdaBiografia">
                   <div class="line">
                     <div class="number"></div>

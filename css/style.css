@@ -9,10 +9,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Fira Code" !important;
+  font-family: "Fira Code";
 }
  label {
-  font-family: "Fira Code" !important;
+  font-family: "Fira Code";
  }
 
 body {
@@ -353,6 +353,12 @@ a.item-footer {
   padding-left: 1.5em;
 }
 
+.ultimoItem{
+  max-height: 100%;
+  height: 100%;
+  border-bottom: 2px solid red;
+}
+
 #menuInformacoes {
   width: 100%;
   display: flex;
@@ -369,6 +375,15 @@ a.item-footer {
   padding-left: 1.5em;
 }
 
+
+#menuContato {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  align-content: flex-start;
+}
+
 .item-menu > .item-menu {
   display: none;
 }
@@ -377,7 +392,7 @@ a.item-footer {
   display: block !important;
 }
 
-.opened {
+.item-menu.ativo{
   font-weight: bold;
   color: white;
 }
