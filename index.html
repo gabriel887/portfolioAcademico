@@ -28,7 +28,7 @@
           <div class="item-navbar hover" data-linkMenu="mainSobreMim">
             <label>_sobre-mim</label>
           </div>
-          <div class="item-navbar hover">
+          <div class="item-navbar hover" data-linkMenu="mainProjetos"> 
             <label>_projetos</label>
           </div>
           <div class="item-navbar ml-auto">
@@ -229,7 +229,8 @@
               </div>
             </div>
           </div>
-          <div id="mainSobreMim">
+
+          <div id="mainSobreMim" class="hidden">
             <div id="menuLateral">
               <div
                 class="item-menu menuPrincipal opened"
@@ -240,8 +241,8 @@
                   Informações</label
                 >
               </div>
-              <div id="menuInformacoes">
-                <div class="item-menu openDiv ativo" data-divId="biografia">
+              <div id="menuInformacoes" class="itemMenuPrincipal">
+                <div class="item-menu openDiv" data-divId="biografia">
                   <label
                     ><i class="fa-solid fa-caret-right"></i>
                     <i class="orange fa-solid fa-folder"></i> Biografia</label>
@@ -260,13 +261,13 @@
                     Diploma</label
                   >
 
-                  <div class="item-menu openDiv" data-divId="">
+                  <div class="item-menu openDiv" data-divId="escolaridade">
                     <label>
                       <i class="fa-solid fa-file-code"></i>
                       Escolaridade
                     </label>
                   </div>
-                  <div class="item-menu openDiv" data-divId="">
+                  <div class="item-menu openDiv" data-divId="cursos">
                     <label>
                       <i class="fa-solid fa-file-code"></i>
                       Cursos
@@ -275,15 +276,15 @@
                 </div>
               </div>
 
-              <div class="item-menu menuPrincipal" data-menuLink="menuContato">
+              <div class="item-menu menuPrincipal opened ativo" data-menuLink="menuContato">
                 <label>
-                    <i class="fa-solid fa-caret-right"></i>
+                    <i class="fa-solid fa-sort-down"></i>
                   Contato</label>
               </div>
               <div id="menuContato">
                 <div class="item-menu">
                   <div><label>
-                    <i class="fa-solid fa-envelope"></i> gabrielvalentim827@gmail.com
+                    <i class="fa-solid fa-envelope"></i> gvalen827@gmail.com
                   </label></div>
                 </div>
                 <div class="item-menu">
@@ -307,7 +308,14 @@
                   <label>biografia.txt</label><i class="fa-solid fa-x"></i>
                 </div>
                 <div class="menuAba" data-id="conhecimento">
-                  <label>conhecimento.txt</label><i class="fa-solid fa-x"></i>
+                  <label>conhecimento.txt</label>
+                  <i class="fa-solid fa-x"></i>
+                </div>
+                <div class="menuAba" data-id="escolaridade">
+                  <label>escolaridade.txt</label><i class="fa-solid fa-x"></i>
+                </div>
+                <div class="menuAba" data-id="cursos">
+                  <label>cursos.txt</label><i class="fa-solid fa-x"></i>
                 </div>
               </div>
               <div class="aba hidden" id="biografia">
@@ -555,6 +563,204 @@
                   <div class="number setaCimaHide"></div>
                   <div class="code">
                     <label class="comentario">&lt;/editor-fold&gt; </label>
+                  </div>
+                </div>
+              </div>
+              <div class="aba hidden" id="escolaridade">
+                <div class="line">
+                  <div class="number"></div>
+                  <div class="code">
+                    <label class="comentario">/**</label>
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="number setaBaixoHide"></div>
+                  <div class="code">
+                    <label class="comentario"
+                      >&lt;editor-fold desc="Técnico de Informática Integrado ao Ensino Médio" defaultstate="collapsed" &gt;</label
+                    >
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="number"></div>
+                  <div class="code">
+                    <label class="comentario"
+                      >Realizei meu ensino médio na Etec Lins, com início em 2018 e finalização em 2020, cursei o Técnico de Informática Integrado ao Ensino Médio.</label
+                    >
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="number setaCimaHide"></div>
+                  <div class="code">
+                    <label class="comentario">&lt;/editor-fold&gt; </label>
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="number setaCimaHide"></div>
+                  <div class="code">
+                    <label class="comentario">&nbsp;</label>
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="number setaBaixoHide"></div>
+                  <div class="code">
+                    <label class="comentario"
+                      >&lt;editor-fold desc="Faculdade" defaultstate="collapsed" &gt;</label
+                    >
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="number"></div>
+                  <div class="code">
+                    <label class="comentario"
+                      >Estou finalizando minha graduação em Sistemas para Internet na Fatec Lins - Professor Antonio Seabra;</label
+                    >
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="number"></div>
+                  <div class="code">
+                    <label class="comentario"
+                      >Iniciei no primeiro semestre de 2021 e finalizarei no segundo semestre de 2023.</label
+                    >
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="number setaCimaHide"></div>
+                  <div class="code">
+                    <label class="comentario">&lt;/editor-fold&gt; </label>
+                  </div>
+                </div>
+              </div>
+              <div class="aba hidden" id="cursos">
+                <div class="line">
+                  <div class="number"></div>
+                  <div class="code">
+                    <label class="comentario">/**</label>
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="number setaBaixoHide"></div>
+                  <div class="code">
+                    <label class="comentario"
+                      >Nesta página serão citados os conhecimentos que adquiri durante os meus estudos, sendo eles variados:</label
+                    >
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="number"></div>
+                  <div class="code"><label class="comentario"> </label></div>
+                </div>
+                <div class="line">
+                  <div class="number setaBaixoHide"></div>
+                  <div class="code">
+                    <label class="comentario"
+                      >&lt;editor-fold desc="Informática para Internet - Etec de Lins" defaultstate="collapsed" &gt;</label
+                    >
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="number"></div>
+                  <div class="code">
+                    <label class="comentario"
+                      >Em 2020 realizei o curso de Informática para Internet na Etec de Lins. Como estava cursando o ensino médio integrado ao técnico em informática, foi possível concluir o curso em apenas um semestre por realizar a equivalência das matérias.</label
+                    >
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="number setaCimaHide"></div>
+                  <div class="code">
+                    <label class="comentario">&lt;/editor-fold&gt; </label>
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="number setaBaixoHide"></div>
+                  <div class="code">
+                    <label class="comentario"
+                      >&lt;editor-fold desc="Java Web Sphere - Etec de Cafelândia" defaultstate="collapsed" &gt;</label
+                    >
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="number"></div>
+                  <div class="code">
+                    <label class="comentario">Em 2021 realizei o curso de Java Web Sphere na Etec de Cafelândia.
+                      </label>
+                  </div>
+                </div>
+                <div class="line">
+                  <div class="number setaCimaHide"></div>
+                  <div class="code">
+                    <label class="comentario">&lt;/editor-fold&gt; </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="mainProjetos">
+            <div id="menuLateral">
+              <div
+                class="item-menu menuPrincipal opened"
+                data-menuLink="menuProjetos"
+              >
+                <label
+                  ><span class=""> <i class="fa-solid fa-sort-down"></i></span>
+                  Informações</label
+                >
+              </div>
+              <div id="menuProjetos" class="itemMenuPrincipal">
+
+                <div class="item-menu dropdownMenu" data-divId="primeiroSemestre">
+                  <label
+                    ><i class="fa-solid fa-caret-right"></i>
+                    <i class="orange fa-solid fa-folder"></i> 1º  Semestre
+                  </label>
+                  <div class="item-menu dropdownMenu" data-divId="escolaridade">
+                    <label>
+                      <i class="fa-solid fa-caret-right"></i>
+                      <i class="purple fa-solid fa-folder"></i> imagens
+                    </label>
+                    <div class="item-menu openDiv" data-divId="cursos">
+                      <label>
+                        <i class="fa-solid fa-image"></i>
+                        imagem1.png
+                      </label>
+                    </div>
+                  </div>
+                  <div class="item-menu openDiv" data-divId="cursos">
+                    <label>
+                      <i class="fa-solid fa-file-code"></i>
+                      readme.txt
+                    </label>
+                  </div>
+                </div>
+
+                <div class="item-menu openDiv" data-divId="conhecimento">
+                  <label>
+                    <i class="fa-solid fa-caret-right"></i>
+                    <i class="t-green fa-solid fa-folder"></i>
+                    Conhecimentos</label
+                  >
+                </div>
+                <div class="item-menu dropdownMenu">
+                  <label>
+                    <i class="fa-solid fa-caret-right"></i>
+                    <i class="t-purple fa-solid fa-folder"></i>
+                    Diploma</label
+                  >
+
+                  <div class="item-menu openDiv" data-divId="escolaridade">
+                    <label>
+                      <i class="fa-solid fa-file-code"></i>
+                      Escolaridade
+                    </label>
+                  </div>
+                  <div class="item-menu openDiv" data-divId="cursos">
+                    <label>
+                      <i class="fa-solid fa-file-code"></i>
+                      Cursos
+                    </label>
                   </div>
                 </div>
               </div>

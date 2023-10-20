@@ -4,6 +4,13 @@
   --corBordaCinza: #2b2d30;
   --corBordaCinzaEscura: rgb(21, 22, 24);
 }
+/*Fontes*/
+@font-face {
+  font-family: "Fira Code";
+  src: local("Fira Code"), url("../assets/fonts/FiraCode-Regular.ttf")
+}
+
+
 
 * {
   box-sizing: border-box;
@@ -43,6 +50,10 @@ body {
 
 .orange {
   color: #d67c32;
+}
+
+.purple {
+  color: #7232d6;
 }
 
 .t-orange {
@@ -347,6 +358,10 @@ a.item-footer {
   font-size: 1.1em;
 }
 
+.item-menu label{
+  cursor: pointer;
+}
+
 .item-menu > .item-menu {
   padding-top: 0.5em;
   padding-bottom: 0.1em;
@@ -359,7 +374,7 @@ a.item-footer {
   border-bottom: 2px solid red;
 }
 
-#menuInformacoes {
+.itemMenuPrincipal {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -369,7 +384,7 @@ a.item-footer {
   border-color: var(--corBordaCinza);
 }
 
-#menuInformacoes > .item-menu {
+.itemMenuPrincipal > .item-menu {
   padding-top: 0.7em;
   padding-bottom: 0.2em;
   padding-left: 1.5em;
@@ -383,7 +398,9 @@ a.item-footer {
   height: 100%;
   align-content: flex-start;
 }
-
+.item-menu:hover{
+  color: white;
+}
 .item-menu > .item-menu {
   display: none;
 }
@@ -392,7 +409,7 @@ a.item-footer {
   display: block !important;
 }
 
-.item-menu.ativo{
+.item-menu.ativo, .menuPrincipal.opened{
   font-weight: bold;
   color: white;
 }
@@ -421,11 +438,11 @@ a.item-footer {
     font-size: 0.8em;
   }
 
-  #menuInformacoes {
+  .itemMenuPrincipal {
     padding-left: 0.9em;
   }
 
-  #menuInformacoes > .item-menu {
+  .itemMenuPrincipal > .item-menu {
     padding-left: 0.5em;
   }
 
@@ -675,6 +692,23 @@ a.item-footer {
   background-color: rgba(255, 255, 255, 0.195);
   color: white;
 }
+
+
+
+
+
+
+
+#mainProjetos {
+  width: 100%;
+  display: flex;
+  height: 100%;
+  overflow-y: clip;
+}
+
+
+
+
 
 @media (max-height: 800px) {
   .aba {

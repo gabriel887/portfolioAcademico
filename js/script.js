@@ -3,6 +3,8 @@ var arrayMenuAbas;
 $(document).ready(function (){
     arrayAbas = $(".aba");
     arrayMenuAbas = $(".menuAba");
+    $(".aba").remove();
+    $(".menuAba").remove();
     $("body").on("click", ".textoFolded", toggleEditorFoldTextoFolded);
     $("body").on("click", ".item-navbar", trocaPagina);
     $("body").on("click", ".dropdownMenu > label", mexeDropDown);
@@ -71,14 +73,21 @@ function mostraMenuPrincipal(){
         $(this).removeClass("opened");
         i.removeClass("fa-sort-down");
         i.addClass("fa-caret-right");
-        $("#"+idDiv).addClass("hidden");
+        if(idDiv == 'menuContato'){
+            $("#"+idDiv).find(".item-menu").addClass("hidden");
+        }else{
+            $("#"+idDiv).addClass("hidden");
+        }
     }else{
         $(this).addClass("opened");
         i.addClass("fa-sort-down");
         i.removeClass("fa-caret-right");
-        $("#"+idDiv).removeClass("hidden");
+        if(idDiv == 'menuContato'){
+            $("#"+idDiv).find(".item-menu").removeClass("hidden");
+        }else{
+            $("#"+idDiv).removeClass("hidden");
+        }
     }
-    
 }
 
 function popularNumeracao(){
@@ -109,6 +118,34 @@ function popularNumeracaoAba(){
     });
     i = 1;
     $("#conhecimento .number").each(function(){
+        let divNumber = $(this);
+        if(divNumber.parent().css("display") !== 'none'){
+            divNumber.append("<label>" + i + "</label>");
+            i++;
+        }
+        if(divNumber.hasClass("setaCimaHide")){
+            divNumber.append(`<i class="fa-solid fa-angle-up iconesSetas"> </i>`); 
+        }
+        if(divNumber.hasClass("setaBaixoHide")){
+            divNumber.append(`<i class="fa-solid fa-angle-down iconesSetas"> </i>`); 
+        }
+    });
+    i = 1;
+    $("#escolaridade .number").each(function(){
+        let divNumber = $(this);
+        if(divNumber.parent().css("display") !== 'none'){
+            divNumber.append("<label>" + i + "</label>");
+            i++;
+        }
+        if(divNumber.hasClass("setaCimaHide")){
+            divNumber.append(`<i class="fa-solid fa-angle-up iconesSetas"> </i>`); 
+        }
+        if(divNumber.hasClass("setaBaixoHide")){
+            divNumber.append(`<i class="fa-solid fa-angle-down iconesSetas"> </i>`); 
+        }
+    });
+    i = 1;
+    $("#cursos .number").each(function(){
         let divNumber = $(this);
         if(divNumber.parent().css("display") !== 'none'){
             divNumber.append("<label>" + i + "</label>");
@@ -161,7 +198,6 @@ function toggleEditorFoldTextoFolded() {
         divNumber.parent().nextUntil(divSetaCima).add(divSetaCima).hide();
         let texto = divNumber.next().text();
         let defaultstate = texto.includes("defaultstate") ? " data-defaultstate=\"collapsed\" " : "" ;
-        console.log(texto.includes("defaultstate"));
         texto = texto.substr(texto.indexOf('"')+1);
         texto = texto.substr(0,texto.indexOf('"'));
         divNumber.next().html(`<label class="comentario textoFolded" ${defaultstate}>` + texto + `</label>`);
@@ -191,7 +227,12 @@ function encolheDefaultState(elemento) {
     elemento.next().html(`<label class="comentario textoFolded" data-defaultstate=\"collapsed\" >` + texto + `</label>`);
 }
 function fecharDetalhesSnippets(){
-    $(this).parent().parent().addClass("hidden");
+    let div = $(this).parent().parent();
+   div.addClass("esconder"); 
+        div.removeClass("mostrar");
+        setTimeout(() => {
+            div.addClass("hidden"); 
+        }, 1500); 
 }
 function abrirDetalhesSnippets(){
     let div = $(this).parent().parent().find(".detalhesSnippet");
@@ -218,6 +259,9 @@ function mexeMenuAba(){
     let div = $(this).attr("data-id");
     $("#"+div).parent().find(".aba").addClass("hidden");
     $("#"+div).removeClass("hidden");
+    $(".item-menu.openDiv").removeClass("ativo");
+    $(".item-menu[data-divId='"+div+"']").addClass("ativo");
+    console.log("pera a");
 }
 
 
@@ -251,42 +295,35 @@ function openAba(){
     
     if(!divItMenu.hasClass("opened")){
         divItMenu.addClass("opened");
-        console.log(divAba);
         if(divAba.length == 0){
             divAba = getAbaById(idDivAba);
             $("#divAbas").append(divAba);
         }
-        console.log(divMenuAba);
         if(divMenuAba.length == 0){
-            console.log("aa");
             divMenuAba = getMenuAbaById(idDivAba);
-            console.log(divMenuAba);
 
             $("#menuSuperiorAbas").append(divMenuAba);
         }
-        
     }
     divAba.parent().find(".aba:not(.hidden)").addClass("hidden");
     divAba.removeClass("hidden");
     divMenuAba.addClass("ativo");
 }
 
-function fechaAba(){
+function fechaAba(event){
+    console.log("hmm")
     let iconFecha = $(this);
     let divSubItem = iconFecha.parent();
     let idAba = divSubItem.attr("data-id");
     let aba = $("#"+idAba);
     let menuAba = $(".item-menu[data-divId=\""+idAba+"\"]");
-    if(menuAba.hasClass("ativo")){
-        menuAba.removeClass("ativo");
-    }
-    menuAba.removeClass("opened");
+    
+    menuAba.removeClass("opened"); 
     
     divSubItem.remove();
     aba.remove();
     if(!aba.hasClass("hidden")){
         let trocaAba = $(".aba:first");
-        console.log(trocaAba);
         if(trocaAba!=undefined){
             trocaAba.removeClass("hidden");
             let idTrocaAba = trocaAba.attr("id");
@@ -294,7 +331,8 @@ function fechaAba(){
             $(".menuAba[data-id=\""+idTrocaAba+"\"]").addClass("ativo");
         }
     }
-    
+
+    event.stopPropagation();
 }
 
 //fa-caret-right seta pra direita
