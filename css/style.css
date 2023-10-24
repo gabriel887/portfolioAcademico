@@ -7,10 +7,8 @@
 /*Fontes*/
 @font-face {
   font-family: "Fira Code";
-  src: local("Fira Code"), url("../assets/fonts/FiraCode-Regular.ttf")
+  src: local("Fira Code"), url("../assets/fonts/FiraCode-Regular.ttf");
 }
-
-
 
 * {
   box-sizing: border-box;
@@ -18,9 +16,9 @@
   padding: 0;
   font-family: "Fira Code";
 }
- label {
+label {
   font-family: "Fira Code";
- }
+}
 
 body {
   max-height: 100%;
@@ -32,10 +30,10 @@ body {
   display: none !important;
 }
 
-.esconder{
+.esconder {
   opacity: 0 !important;
 }
-.mostrar{
+.mostrar {
   opacity: 1 !important;
 }
 
@@ -195,7 +193,10 @@ body {
   flex: 1 1 auto;
   width: 100%;
   display: flex;
+  max-height: calc(100% - 76px);
   flex-direction: column;
+  overflow-x: clip;
+  overflow-y: auto;
 }
 
 .line {
@@ -227,7 +228,7 @@ body {
 }
 .code > span,
 .code > label {
-  font-size: 1.2em !important;
+  font-size: 1em ;
 }
 
 .indent > .code {
@@ -237,6 +238,7 @@ body {
 }
 .indent {
   padding-left: 2em;
+  height: 100%;
 }
 
 .lf-border {
@@ -342,6 +344,8 @@ a.item-footer {
 
 .menuPrincipal {
   height: 55px !important;
+  display: flex;
+  align-items: center;
 }
 
 #menuLateral > div {
@@ -358,7 +362,7 @@ a.item-footer {
   font-size: 1.1em;
 }
 
-.item-menu label{
+.item-menu label {
   cursor: pointer;
 }
 
@@ -368,7 +372,7 @@ a.item-footer {
   padding-left: 1.5em;
 }
 
-.ultimoItem{
+.ultimoItem {
   max-height: 100%;
   height: 100%;
   border-bottom: 2px solid red;
@@ -390,7 +394,6 @@ a.item-footer {
   padding-left: 1.5em;
 }
 
-
 #menuContato {
   width: 100%;
   display: flex;
@@ -398,7 +401,7 @@ a.item-footer {
   height: 100%;
   align-content: flex-start;
 }
-.item-menu:hover{
+.item-menu:hover {
   color: white;
 }
 .item-menu > .item-menu {
@@ -409,93 +412,25 @@ a.item-footer {
   display: block !important;
 }
 
-.item-menu.ativo, .menuPrincipal.opened{
+.item-menu.ativo,
+.menuPrincipal.opened {
   font-weight: bold;
   color: white;
 }
 
-@media screen and (max-width: 1440px) {
-  .top-navbar {
-    font-size: 0.9em;
-  }
-  .item-navbar {
-    padding: 6px 32px;
-  }
-
-  .code {
-    font-size: 0.9em;
-  }
-
-  .code > span {
-    font-size: 0.9em;
-  }
-
-  .indent > .code {
-    font-size: 0.9em;
-  }
-
-  .item-menu {
-    font-size: 0.8em;
-  }
-
-  .itemMenuPrincipal {
-    padding-left: 0.9em;
-  }
-
-  .itemMenuPrincipal > .item-menu {
-    padding-left: 0.5em;
-  }
-
-  #imgJavaLogo {
-    height: 350px;
-  }
-  .mainCodigos {
-    width: 60%;
-  }
-  .mainImagemLateral {
-    width: 40%;
-  }
-}
-
-@media (max-height: 600px) {
-  .container {
-    width: 98%;
-    height: 98%;
-  }
-  .sm-hidden {
-    display: none !important;
-  }
-}
-
-@media (max-height: 800px) {
-  .md-hidden {
-    display: none !important;
-  }
-
-  #textoBemVindo {
-    font-size: 1.6em !important;
-  }
-
-  #textoMeuNome {
-    font-size: 2.4em !important;
-  }
-
-  #textoDesenv {
-    font-size: 1.8em !important;
-  }
-}
 
 /* abas */
-#divAbas {
+.divAbas {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 /* menu abas */
-#menuSuperiorAbas {
+.menuSuperiorAbas {
   display: flex;
   width: 100%;
   height: 55px;
@@ -504,6 +439,7 @@ a.item-footer {
   border-style: solid;
   border-top-width: 0;
   border-right-width: 0;
+  overflow-y: auto;
 }
 
 .menuAba {
@@ -693,12 +629,6 @@ a.item-footer {
   color: white;
 }
 
-
-
-
-
-
-
 #mainProjetos {
   width: 100%;
   display: flex;
@@ -707,12 +637,111 @@ a.item-footer {
 }
 
 
+@media screen and (max-width: 1440px) {
+  .top-navbar {
+    font-size: 0.9em;
+  }
+  .item-navbar {
+    padding: 6px 32px;
+  }
 
+  .code {
+    font-size: 0.9em;
+  }
 
+  .code > span {
+    font-size: 0.9em;
+  }
+
+  .indent > .code {
+    font-size: 0.9em;
+  }
+
+  .item-menu {
+    font-size: 0.9em;
+  }
+
+  .itemMenuPrincipal {
+    padding-left: 0.9em;
+  }
+
+  .itemMenuPrincipal > .item-menu {
+    padding-left: 0.5em;
+  }
+
+  #imgJavaLogo {
+    height: 350px;
+  }
+  .mainCodigos {
+    width: 60%;
+  }
+  .mainImagemLateral {
+    width: 40%;
+  }
+}
+
+@media (max-height: 600px),  (max-width:768px)  {
+  .container {
+    width: 98%;
+    height: 98%;
+  }
+  .sm-hidden {
+    display: none !important;
+  }
+}
+
+@media  (max-width:912px){
+  .mainImagemLateral{
+    display: none;
+  }
+  .mainCodigos{
+    width: 100%;
+  }
+  
+  #textoBemVindo {
+    font-size: 1.6em !important;
+  }
+
+  #textoMeuNome {
+    font-size: 2.2em !important;
+  }
+
+  #textoDesenv {
+    font-size: 1.8em !important;
+  }
+
+  #menuLateral{
+    min-width: 25%;
+  }
+
+  #menuLateral .item-menu{
+    font-size: 0.7em;
+  }
+
+  #menuLateral .item-menu > .item-menu{
+    font-size: 0.9em;
+  }
+
+  .esquerdaBiografia{
+    width: 100%;
+    height: max-content;
+    padding-bottom: 10px;
+  }
+  .direitaBiografia{
+    width: 100%;
+    padding-top: 10px;
+    height: max-content;
+  }
+
+  .menuAba{
+    font-size: 0.9em;
+    padding: 6px 5px 6px 10px;
+  }
+}
 
 @media (max-height: 800px) {
-  .aba {
-    flex-wrap: nowrap;
+  .menuAba {
+    font-size: 1em;
   }
   .esquerdaBiografia {
     width: 100%;
@@ -737,5 +766,24 @@ a.item-footer {
   }
   .fs-3 {
     font-size: 1.1em;
+  }
+  .menuPrincipal {
+    height: auto !important;
+  }
+
+  .md-hidden {
+    display: none !important;
+  }
+
+  #textoBemVindo {
+    font-size: 1.6em !important;
+  }
+
+  #textoMeuNome {
+    font-size: 2.2em !important;
+  }
+
+  #textoDesenv {
+    font-size: 1.8em !important;
   }
 }
