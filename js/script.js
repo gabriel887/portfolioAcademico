@@ -330,13 +330,13 @@ function openAba() {
     }
     popularNumeracaoAba(idDivAba);
   }
+  
   divAba.parent().find(".aba:not(.hidden)").addClass("hidden");
   divAba.removeClass("hidden");
   divMenuAba.addClass("ativo");
 }
 
 function fechaAba(event) {
-  console.log("hmm");
   let iconFecha = $(this);
   let divSubItem = iconFecha.parent();
   let idAba = divSubItem.attr("data-id");
@@ -352,6 +352,7 @@ function fechaAba(event) {
     if (trocaAba != undefined) {
       trocaAba.removeClass("hidden");
       let idTrocaAba = trocaAba.attr("id");
+      $(".item-menu").removeClass("ativo");
       $('.item-menu[data-divId="' + idTrocaAba + '"]').addClass("ativo");
       $('.menuAba[data-id="' + idTrocaAba + '"]').addClass("ativo");
     }
