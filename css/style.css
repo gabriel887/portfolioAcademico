@@ -514,7 +514,7 @@ a.item-footer {
   color: #99c9f9;
 }
 
-.esquerdaBiografia {
+.esquerdaAba {
   width: 55%;
   border-right-style: solid;
   border-right-color: var(--corBordaCinza);
@@ -522,7 +522,7 @@ a.item-footer {
   height: 100%;
 }
 
-.direitaBiografia {
+.direitaAba {
   width: 45%;
   height: 100%;
 }
@@ -718,12 +718,12 @@ a.item-footer {
     font-size: 0.9em;
   }
 
-  .esquerdaBiografia{
+  .esquerdaAba{
     width: 100%;
     height: max-content;
     padding-bottom: 10px;
   }
-  .direitaBiografia{
+  .direitaAba{
     width: 100%;
     padding-top: 10px;
     height: max-content;
@@ -739,10 +739,10 @@ a.item-footer {
   .menuAba {
     font-size: 1em;
   }
-  .esquerdaBiografia {
+  .esquerdaAba {
     width: 100%;
   }
-  .direitaBiografia {
+  .direitaAba {
     width: 100%;
   }
   .headerSnippetText label {

@@ -1,0 +1,30 @@
+.carousel {
+	height: 700px;
+	perspective: 600px;
+	transform: translateY(-100px);
+}
+
+.carousel .carousel-item {
+	cursor: -webkit-grab;
+	cursor: grab;
+	width: 400px;
+}
+
+.carousel .carousel-item:active {
+	cursor: -webkit-grabbing;
+	cursor: grabbing;
+}
+
+.carousel .carousel-item img {
+	width: 100%;
+}
+
+.carousel .carousel-item h3 {
+	background-color: #ffffff;
+	color: #000000;
+	font-size: 2em;
+	font-weight: bold;
+	margin: -5px 0 0;
+	padding: 10px 5px;
+	text-align: center;
+}

@@ -255,6 +255,7 @@ function fecharDetalhesSnippets() {
     div.addClass("hidden");
   }, 1500);
 }
+
 function abrirDetalhesSnippets() {
   let div = $(this).parent().parent().find(".detalhesSnippet");
   if (div.hasClass("hidden")) {
@@ -329,6 +330,9 @@ function openAba() {
       $("#" + idParent + " .menuSuperiorAbas:first").append(divMenuAba);
     }
     popularNumeracaoAba(idDivAba);
+
+    $("#" + idDivAba +' .carousel').carousel();
+    
   }
   
   divAba.parent().find(".aba:not(.hidden)").addClass("hidden");

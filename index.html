@@ -16,13 +16,13 @@
       href="css/styleMainProjetos.css"
       media="screen"
     />
-    <script
-      src="https://kit.fontawesome.com/27c2bc52fa.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/script.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css/styleCarrousel.css"
+      media="screen"
+    />
+
   </head>
   <body>
     <div class="b-gray background">
@@ -321,7 +321,7 @@
                 </div>
               </div>
               <div class="aba hidden" id="biografia">
-                <div class="esquerdaBiografia">
+                <div class="esquerdaAba">
                   <div class="line">
                     <div class="number"></div>
                     <div class="code">
@@ -397,7 +397,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="direitaBiografia">
+                <div class="direitaAba">
                   <div id="snippetShowcase">
                     <div class="w100 mb-5">
                       <label class="comentario fs-3"
@@ -750,12 +750,12 @@
                     ><i class="fa-solid fa-caret-right"></i>
                     <i class="orange fa-solid fa-folder"></i> 1º Semestre
                   </label>
-                  <div class="item-menu dropdownMenu" data-divId="escolaridade">
+                  <div class="item-menu dropdownMenu">
                     <label>
                       <i class="fa-solid fa-caret-right"></i>
                       <i class="purple fa-solid fa-folder"></i> imagens
                     </label>
-                    <div class="item-menu openDiv" data-divId="cursos">
+                    <div class="item-menu openDiv" data-divId="imagem1">
                       <label>
                         <i class="fa-solid fa-image"></i>
                         imagem1.png
@@ -809,17 +809,39 @@
                   <label>readme.txt</label><i class="fa-solid fa-x"></i>
                 </div>
               </div>
-
+              
               <div class="aba hidden" id="readmePrimeiroSemestre">
-                <div class="w100 center">
-                  <h1>1º Semestre - Design Digital</h1>
+                <div class="esquerdaAba">
+                  <div class="w100 center">
+                    <h1>1º Semestre - Design Digital</h1>
+                  </div>
+                  <div class="w100 center p-v-1">
+                    <p><b>Ferramentas utilizadas:</b> Photoshop.</p>
+                  </div>
+                  <div class="w100 center">
+                    <p>Durante a disciplina de Design Digital, no primeiro semestre de 2022, foi ensinado a utilização da ferramenta Photoshop para edição de imagens, em decorrência disso foi ensinado a recortar imagens, alterar propriedades como sombreamento e saturação, a utilização das camadas disponibilizadas pela ferramenta para facilitar a implementação das imagens, bem como o desenvolvimento de máscaras para praticidade ao criar mockups.
+                    </p>
+                  </div>
                 </div>
-                <div class="w100 center p-v-1">
-                  <p><b>Ferramentas utilizadas:</b> Photoshop.</p>
-                </div>
-                <div class="w100 center">
-                  <p>Durante a disciplina de Design Digital, no primeiro semestre de 2022, foi ensinado a utilização da ferramenta Photoshop para edição de imagens, em decorrência disso foi ensinado a recortar imagens, alterar propriedades como sombreamento e saturação, a utilização das camadas disponibilizadas pela ferramenta para facilitar a implementação das imagens, bem como o desenvolvimento de máscaras para praticidade ao criar mockups.
-                  </p>
+                <div class="direitaAba">
+                  <div id="snippetShowcase">
+                    <div class="w100 mb-5">
+                      <h3>Imagens</h3>
+                    </div>
+                    <div>
+                      <div class="carrossel">
+                          <div>
+                            <img src="img/semestre1/catedral.jpg" >
+                          </div>
+                          <div>
+                            <h1>2</h1>
+                          </div>
+                          <div>
+                            <h1>3</h1>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -855,5 +877,14 @@
         </div>
       </div>
     </div>
+    
+    <script
+      src="https://kit.fontawesome.com/27c2bc52fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+  
+    <script src="js/script.js"></script>
   </body>
 </html>
