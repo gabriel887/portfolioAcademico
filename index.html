@@ -16,13 +16,17 @@
       href="css/styleMainProjetos.css"
       media="screen"
     />
+
     <link
       rel="stylesheet"
       type="text/css"
-      href="css/styleCarrousel.css"
-      media="screen"
+      href="assets/slick/slick/slick.css"
     />
-
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/slick/slick/slick-theme.css"
+    />
   </head>
   <body>
     <div class="b-gray background">
@@ -218,7 +222,11 @@
             </div>
             <div class="mainImagemLateral">
               <div class="imgDiv">
-                <img id="imgJavaLogo" draggable="false" src="img/javaLogo.png" />
+                <img
+                  id="imgJavaLogo"
+                  draggable="false"
+                  src="img/javaLogo.png"
+                />
               </div>
             </div>
           </div>
@@ -305,7 +313,7 @@
             </div>
 
             <div class="divAbas">
-              <div class="menuSuperiorAbas" style="max-width: auto !important;">
+              <div class="menuSuperiorAbas" style="max-width: auto !important">
                 <div class="menuAba" data-id="biografia">
                   <label>biografia.txt</label><i class="fa-solid fa-x"></i>
                 </div>
@@ -730,7 +738,7 @@
             </div>
           </div>
 
-          <div id="mainProjetos" class=" divMain">
+          <div id="mainProjetos" class="divMain">
             <div id="menuLateral">
               <div
                 class="item-menu menuPrincipal opened"
@@ -809,36 +817,106 @@
                   <label>readme.txt</label><i class="fa-solid fa-x"></i>
                 </div>
               </div>
-              
+
               <div class="aba hidden" id="readmePrimeiroSemestre">
                 <div class="esquerdaAba">
-                  <div class="w100 center">
+                  <div class="w100">
                     <h1>1º Semestre - Design Digital</h1>
                   </div>
-                  <div class="w100 center p-v-1">
-                    <p><b>Ferramentas utilizadas:</b> Photoshop.</p>
+                  <div class="w100 p-v-1">
+                    <label class="fs-3"><b>Ferramentas utilizadas:</b> Photoshop.</label>
                   </div>
-                  <div class="w100 center">
-                    <p>Durante a disciplina de Design Digital, no primeiro semestre de 2022, foi ensinado a utilização da ferramenta Photoshop para edição de imagens, em decorrência disso foi ensinado a recortar imagens, alterar propriedades como sombreamento e saturação, a utilização das camadas disponibilizadas pela ferramenta para facilitar a implementação das imagens, bem como o desenvolvimento de máscaras para praticidade ao criar mockups.
+                  <div class="w100">
+                    <p class="fs-2">
+                      Durante a disciplina de Design Digital, no primeiro
+                      semestre de 2022, foi ensinado a utilização da ferramenta
+                      Photoshop para edição de imagens, em decorrência disso foi
+                      ensinado a recortar imagens, alterar propriedades como
+                      sombreamento e saturação, a utilização das camadas
+                      disponibilizadas pela ferramenta para facilitar a
+                      implementação das imagens, bem como o desenvolvimento de
+                      máscaras para praticidade ao criar mockups.
                     </p>
                   </div>
                 </div>
                 <div class="direitaAba">
-                  <div id="snippetShowcase">
-                    <div class="w100 mb-5">
-                      <h3>Imagens</h3>
-                    </div>
-                    <div>
-                      <div class="carrossel">
-                          <div>
-                            <img src="img/semestre1/catedral.jpg" >
-                          </div>
-                          <div>
-                            <h1>2</h1>
-                          </div>
-                          <div>
-                            <h1>3</h1>
-                          </div>
+                  <div class="w100 mb-5 t-center">
+                    <h1>Imagens</h1>
+                  </div>
+                  <div class="w100 center">
+                    <div class="carrossel">
+                      <div>
+                        <div class="center wrap gap-5">
+                          <img
+                            class="imgCarrossel"
+                            src="img/semestre1/catedral.jpg"
+                            alt="Imagem de uma catedral editada no Photoshop."
+                          />
+                          <label class="legendaImgCarrosel"
+                            >Treino de redimensionamento de imagem</label
+                          >
+                        </div>
+                      </div>
+                      <div>
+                        <div class="center wrap gap-5">
+                          <img
+                            class="imgCarrossel"
+                            src="img/semestre1/lugaresEmFotoPolaroid.jpg"
+                            alt="Imagem de diversos locais famosos editados para caberem em pequenas fotos polaroids."
+                          />
+                          <label class="legendaImgCarrosel"
+                            >Aprendizado de recorte e uso de máscaras</label
+                          >
+                        </div>
+                      </div>
+                      <div>
+                        <div class="center wrap gap-5">
+                          <img
+                            class="imgCarrossel"
+                            src="img/semestre1/cachorroNaLua.jpg"
+                            alt="Imagem de um cachorro com óculos de sol, sentado em uma cadeira de praia com uma lua gigante ao fundo, imagem feita no photoshop para treinar habilidades de recorte."
+                          />
+                          <label class="legendaImgCarrosel"
+                            >Treino de recorte e posicionamento</label
+                          >
+                        </div>
+                      </div>
+                      <div>
+                        <div class="center wrap gap-5">
+                          <img
+                            class="imgCarrossel"
+                            src="img/semestre1/fotosDeCasamento.jpg"
+                            alt="Imagem de um ensaio fotográfico de casamento."
+                          />
+                          <label class="legendaImgCarrosel"
+                            >Treino de uso de recorte, posicionamento e
+                            máscara</label
+                          >
+                        </div>
+                      </div>
+                      <div>
+                        <div class="center wrap gap-5">
+                          <img
+                            class="imgCarrossel"
+                            src="img/semestre1/cachorroEspelhado.jpg"
+                            alt="Imagem de um cachorro marrom em um ambiente nevado olhando para o lado esquerdo, encarando o mesmo cachorro espelhado."
+                          />
+                          <label class="legendaImgCarrosel"
+                            >Treino de uso da ferramenta varinha mágica</label
+                          >
+                        </div>
+                      </div>
+                      <div>
+                        <div class="center wrap gap-5">
+                          <img
+                            class="imgCarrossel"
+                            src="img/semestre1/diversosBarcos.jpg"
+                            alt="Imagem de diversos barcos espalhados por uma praia"
+                          />
+                          <label class="legendaImgCarrosel"
+                            >Treino de perspectiva</label
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -877,14 +955,18 @@
         </div>
       </div>
     </div>
-    
+
     <script
       src="https://kit.fontawesome.com/27c2bc52fa.js"
       crossorigin="anonymous"
     ></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
-  
+    <script
+      type="text/javascript"
+      src="/assets/slick/slick/slick.min.js"
+    ></script>
+
     <script src="js/script.js"></script>
   </body>
 </html>

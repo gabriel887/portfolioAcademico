@@ -331,8 +331,9 @@ function openAba() {
     }
     popularNumeracaoAba(idDivAba);
 
-    $("#" + idDivAba +' .carousel').carousel();
-    
+    $("#" + idDivAba +' .carrossel').slick({
+      dots: true,
+    });
   }
   
   divAba.parent().find(".aba:not(.hidden)").addClass("hidden");
