@@ -7,7 +7,7 @@
 /*Fontes*/
 @font-face {
   font-family: "Fira Code";
-  src: local("Fira Code"), url("../assets/fonts/FiraCode-Regular.ttf");
+  src: local("Fira Code"), url("../dependencias/fonts/FiraCode-Regular.ttf");
 }
 
 * {
