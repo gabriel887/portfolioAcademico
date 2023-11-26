@@ -1,8 +1,10 @@
 var arrayAbas;
 var arrayMenuAbas;
+var arrayCarrossel;
 $(document).ready(function () {
   arrayAbas = $(".aba");
   arrayMenuAbas = $(".menuAba");
+  arrayCarrossel = $(".carrossel");
   $(".aba").remove();
   $(".menuAba").remove();
   $("body").on("click", ".textoFolded", toggleEditorFoldTextoFolded);
@@ -307,6 +309,15 @@ function getMenuAbaById(id) {
   });
   return menuAba;
 }
+function getCarrosselById(id) {
+  let carrossel;
+  arrayCarrossel.each(function () {
+    if ($(this).attr("data-idCarrossel") === id) {
+      carrossel = $(this).clone();
+    }
+  });
+  return carrossel;
+}
 function openAba() {
   let idParent = $(this).parents(".divMain:first").attr("id");
   let divItMenu = $(this);
@@ -323,7 +334,7 @@ function openAba() {
     divItMenu.addClass("opened");
     if (divAba.length == 0) {
       divAba = getAbaById(idDivAba);
-      $("#" + idParent + " .divAbas:first").append(divAba);
+      $("#" + idParent + " .divAbas:first").append(divAba).clone();
     }
     if (divMenuAba.length == 0) {
       divMenuAba = getMenuAbaById(idDivAba);
@@ -331,12 +342,13 @@ function openAba() {
       $("#" + idParent + " .menuSuperiorAbas:first").append(divMenuAba);
     }
     popularNumeracaoAba(idDivAba);
-    let divCarrossel = $("#" + idDivAba +" .carrossel");
-    if(!divCarrossel.hasClass("slick-initialized")){
-      divCarrossel.slick({
-        dots: true,
-      });
-    }
+    let divPorCarrossel = $("#" + idDivAba +" .colocaCarrossel");
+    let divCarrossel = getCarrosselById(idDivAba);
+    console.log(divCarrossel);
+    divPorCarrossel.html(divCarrossel);
+    divCarrossel.slick({
+      dots: true,
+    });
   }
   
   divAba.parent().find(".aba:not(.hidden)").addClass("hidden");
