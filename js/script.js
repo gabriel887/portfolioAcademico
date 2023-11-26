@@ -322,7 +322,6 @@ function openAba() {
   let idParent = $(this).parents(".divMain:first").attr("id");
   let divItMenu = $(this);
   let idDivAba = $(this).attr("data-divId");
-  console.log(idDivAba);
   let divAba = $("#" + idDivAba);
   let divMenuAba = $(".menuAba[data-id='" + idDivAba + "']");
 
@@ -344,11 +343,12 @@ function openAba() {
     popularNumeracaoAba(idDivAba);
     let divPorCarrossel = $("#" + idDivAba +" .colocaCarrossel");
     let divCarrossel = getCarrosselById(idDivAba);
-    console.log(divCarrossel);
-    divPorCarrossel.html(divCarrossel);
-    divCarrossel.slick({
-      dots: true,
-    });
+    if(divCarrossel !== undefined){
+      divPorCarrossel.html(divCarrossel);
+      divCarrossel.slick({
+        dots: true,
+      });
+    }
   }
   
   divAba.parent().find(".aba:not(.hidden)").addClass("hidden");
@@ -365,11 +365,10 @@ function fechaAba(event) {
 
   menuAba.removeClass("opened");
 
+  let trocaAba = divSubItem.parent().parent().find(".aba:first");
   divSubItem.remove();
   aba.remove();
   if (!aba.hasClass("hidden")) {
-    console.log("a");
-    let trocaAba = $(".aba:first");
     if (trocaAba != undefined) {
       trocaAba.removeClass("hidden");
       let idTrocaAba = trocaAba.attr("id");
