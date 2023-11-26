@@ -27,7 +27,8 @@ $(document).ready(function () {
 
 function trocaPagina() {
   let link = $(this).attr("data-linkMenu");
-  $("#" + link)
+  if(link !== "" && link !== undefined){
+    $("#" + link)
     .parent()
     .children("div")
     .each(function () {
@@ -44,6 +45,7 @@ function trocaPagina() {
     }
   });
   $(this).addClass("selected");
+  }
 }
 
 function mexeDropDown() {
@@ -285,7 +287,6 @@ function mexeMenuAba() {
   $("#" + div).removeClass("hidden");
   $(".item-menu.openDiv").removeClass("ativo");
   $(".item-menu[data-divId='" + div + "']").addClass("ativo");
-  console.log("pera a");
 }
 
 function getAbaById(id) {
@@ -310,11 +311,12 @@ function openAba() {
   let idParent = $(this).parents(".divMain:first").attr("id");
   let divItMenu = $(this);
   let idDivAba = $(this).attr("data-divId");
+  console.log(idDivAba);
   let divAba = $("#" + idDivAba);
   let divMenuAba = $(".menuAba[data-id='" + idDivAba + "']");
 
   $(".menuAba").removeClass("ativo");
-  $("#"+idParent+" #menuInformacoes").find(".openDiv").removeClass("ativo");
+  $("#"+idParent+" .itemMenuPrincipal").find(".openDiv").removeClass("ativo");
   divItMenu.addClass("ativo");
 
   if (!divItMenu.hasClass("opened")) {
@@ -329,10 +331,12 @@ function openAba() {
       $("#" + idParent + " .menuSuperiorAbas:first").append(divMenuAba);
     }
     popularNumeracaoAba(idDivAba);
-
-    $("#" + idDivAba +' .carrossel').slick({
-      dots: true,
-    });
+    let divCarrossel = $("#" + idDivAba +" .carrossel");
+    if(!divCarrossel.hasClass("slick-initialized")){
+      divCarrossel.slick({
+        dots: true,
+      });
+    }
   }
   
   divAba.parent().find(".aba:not(.hidden)").addClass("hidden");
@@ -352,6 +356,7 @@ function fechaAba(event) {
   divSubItem.remove();
   aba.remove();
   if (!aba.hasClass("hidden")) {
+    console.log("a");
     let trocaAba = $(".aba:first");
     if (trocaAba != undefined) {
       trocaAba.removeClass("hidden");

@@ -46,12 +46,14 @@
             <label>_projetos</label>
           </div>
           <div class="item-navbar ml-auto">
-            <label>fatec</label>
+            <div class="center">
+              <img src="img/logoFatec.png" id="imgLogoFatec" />
+            </div>
           </div>
         </div>
 
         <div id="main">
-          <div id="mainBemVindo" class="hidden divMain">
+          <div id="mainBemVindo" class="divMain">
             <div class="mainCodigos">
               <div class="line">
                 <div class="number"></div>
@@ -315,17 +317,17 @@
 
             <div class="divAbas">
               <div class="menuSuperiorAbas" style="max-width: auto !important">
-                <div class="menuAba" data-id="biografia">
+                <div class="menuAba opened" data-id="biografia">
                   <label>biografia.txt</label><i class="fa-solid fa-x"></i>
                 </div>
-                <div class="menuAba" data-id="conhecimento">
+                <div class="menuAba opened" data-id="conhecimento">
                   <label>conhecimento.txt</label>
                   <i class="fa-solid fa-x"></i>
                 </div>
-                <div class="menuAba" data-id="escolaridade">
+                <div class="menuAba opened" data-id="escolaridade">
                   <label>escolaridade.txt</label><i class="fa-solid fa-x"></i>
                 </div>
-                <div class="menuAba" data-id="cursos">
+                <div class="menuAba opened" data-id="cursos">
                   <label>cursos.txt</label><i class="fa-solid fa-x"></i>
                 </div>
               </div>
@@ -780,7 +782,7 @@
             </div>
           </div>
 
-          <div id="mainProjetos" class="divMain">
+          <div id="mainProjetos" class="hidden divMain">
             <div id="menuLateral">
               <div
                 class="item-menu menuPrincipal opened"
@@ -793,7 +795,7 @@
               </div>
               <div id="menuProjetos" class="itemMenuPrincipal">
                 <div
-                  class="item-menu dropdownMenu openDiv"
+                  class="item-menu openDiv"
                   data-divId="readmePrimeiroSemestre"
                 >
                   <label
@@ -852,22 +854,22 @@
 
             <div class="divAbas">
               <div class="menuSuperiorAbas">
-                <div class="menuAba openDiv" data-id="readmePrimeiroSemestre">
+                <div class="menuAba openDiv opened" data-id="readmePrimeiroSemestre">
                   <label>primeiroSemestre.txt</label><i class="fa-solid fa-x"></i>
                 </div>
-                <div class="menuAba openDiv" data-id="readmeSegundoSemestre">
+                <div class="menuAba openDiv opened" data-id="readmeSegundoSemestre">
                   <label>segundoSemestre.txt</label><i class="fa-solid fa-x"></i>
                 </div>
-                <div class="menuAba openDiv" data-id="readmeTerceiroSemestre">
+                <div class="menuAba openDiv opened" data-id="readmeTerceiroSemestre">
                   <label>terceiroSemestre.txt</label><i class="fa-solid fa-x"></i>
                 </div>
-                <div class="menuAba openDiv" data-id="readmeQuartoSemestre">
+                <div class="menuAba openDiv opened" data-id="readmeQuartoSemestre">
                   <label>quartoSemestre.txt</label><i class="fa-solid fa-x"></i>
                 </div>
-                <div class="menuAba openDiv" data-id="readmeQuintoSemestre">
+                <div class="menuAba openDiv opened" data-id="readmeQuintoSemestre">
                   <label>quintoSemestre.txt</label><i class="fa-solid fa-x"></i>
                 </div>
-                <div class="menuAba openDiv" data-id="readmeSextoSemestre">
+                <div class="menuAba openDiv opened" data-id="readmeSextoSemestre">
                   <label>sextoSemestre.txt</label><i class="fa-solid fa-x"></i>
                 </div>
               </div>
@@ -1272,7 +1274,7 @@
                       <div>
                         <div class="center wrap gap-5">
                           <img
-                            class="imgCarrossel"
+                            class="imgCelularCarrossel"
                             src="img/semestre5/imagem1.jpg"
                             alt="Imagem inicial do Projeto Muzzik, mostrando a tela de login"
                           />
@@ -1284,7 +1286,7 @@
                       <div>
                         <div class="center wrap gap-5">
                           <img
-                            class="imgCarrossel"
+                            class="imgCelularCarrossel"
                             src="img/semestre5/imagem2.jpg"
                             alt="Imagem inicial do Projeto Muzzik, mostrando a tela de cadastro"
                           />
@@ -1297,7 +1299,7 @@
                       <div>
                         <div class="center wrap gap-5">
                           <img
-                            class="imgCarrossel"
+                            class="imgCelularCarrossel"
                             src="img/semestre5/imagem3.jpg"
                             alt="Continuação do Projeto Muzzik, mostrando a tela de inicial de listagem de todas as músicas"
                           />
@@ -1310,7 +1312,7 @@
                       <div>
                         <div class="center wrap gap-5">
                           <img
-                            class="imgCarrossel"
+                            class="imgCelularCarrossel"
                             src="img/semestre5/imagem4.jpg"
                             alt="Continuação do Projeto Muzzik, mostrando a tela de quando uma música em específico é aberta."
                           />
@@ -1322,7 +1324,7 @@
                       <div>
                         <div class="center wrap gap-5">
                           <img
-                            class="imgCarrossel"
+                            class="imgCelularCarrossel"
                             src="img/semestre5/imagem5.jpg"
                             alt="Imagem final do Projeto Muzzik, mostrando a tela de listagem de playlist"
                           />
@@ -1359,37 +1361,24 @@
                       <div>
                         <div class="center wrap gap-5">
                           <img
-                            class="imgCarrossel"
-                            src="img/semestre6/imagem1.jpg"
-                            alt="Imagem inicial do Projeto Muzzik, mostrando a tela de login"
+                            class="imgCelularCarrossel"
+                            src="img/semestre6/imagem1.png"
+                            alt="Imagem inicial do Projeto Flutter, mostrando a tela de login"
                           />
                           <label class="legendaImgCarrosel"
-                            >Imagem inicial do Projeto Muzzik, mostrando a tela de login.</label
+                            >Imagem inicial do Projeto Flutter, mostrando a tela de login.</label
                           >
                         </div>
                       </div>
                       <div>
                         <div class="center wrap gap-5">
                           <img
-                            class="imgCarrossel"
-                            src="img/semestre6/imagem2.jpg"
-                            alt="Imagem inicial do Projeto Muzzik, mostrando a tela de cadastro"
+                            class="imgCelularCarrossel"
+                            src="img/semestre6/imagem2.png"
+                            alt="Imagem inicial do Projeto Flutter, mostrando a tela inicial com a listagem de músicas"
                           />
                           <label class="legendaImgCarrosel"
-                            >Continuação do Projeto Muzzik, mostrando a tela de cadastro</label
-                          >
-                        </div>
-                      </div>
-                      
-                      <div>
-                        <div class="center wrap gap-5">
-                          <img
-                            class="imgCarrossel"
-                            src="img/semestre6/imagem3.jpg"
-                            alt="Continuação do Projeto Muzzik, mostrando a tela de inicial de listagem de todas as músicas"
-                          />
-                          <label class="legendaImgCarrosel"
-                            >Continuação do Projeto Muzzik, mostrando a tela de inicial de listagem de todas as músicas</label
+                            >Continuação do Projeto Flutter, mostrando a tela inicial com a listagem de músicas</label
                           >
                         </div>
                       </div>
@@ -1397,24 +1386,12 @@
                       <div>
                         <div class="center wrap gap-5">
                           <img
-                            class="imgCarrossel"
-                            src="img/semestre5/imagem4.jpg"
-                            alt="Continuação do Projeto Muzzik, mostrando a tela de quando uma música em específico é aberta."
+                            class="imgCelularCarrossel"
+                            src="img/semestre6/imagem3.png"
+                            alt="Continuação do Projeto Flutter, mostrando a tela de uma música selecionada"
                           />
                           <label class="legendaImgCarrosel"
-                            >Continuação do Projeto Muzzik, mostrando a tela de quando uma música em específico é aberta.</label
-                          >
-                        </div>
-                      </div>
-                      <div>
-                        <div class="center wrap gap-5">
-                          <img
-                            class="imgCarrossel"
-                            src="img/semestre5/imagem5.jpg"
-                            alt="Imagem final do Projeto Muzzik, mostrando a tela de listagem de playlist"
-                          />
-                          <label class="legendaImgCarrosel"
-                            >Imagem final do Projeto Muzzik, mostrando a tela de listagem de playlist</label
+                            >Continuação do Projeto Flutter, mostrando a tela de uma música selecionada</label
                           >
                         </div>
                       </div>
