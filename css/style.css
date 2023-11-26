@@ -350,7 +350,15 @@ p{
   border-left-style: solid;
 }
 
-a.item-footer {
+#downloadCurriculo{
+  color: #607b96;
+}
+
+#downloadCurriculo:hover{
+  color: white;
+}
+
+a {
   text-decoration: none !important;
 }
 
