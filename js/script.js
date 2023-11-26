@@ -308,7 +308,6 @@ function getMenuAbaById(id) {
 }
 function openAba() {
   let idParent = $(this).parents(".divMain:first").attr("id");
-  console.log(idParent);
   let divItMenu = $(this);
   let idDivAba = $(this).attr("data-divId");
   let divAba = $("#" + idDivAba);

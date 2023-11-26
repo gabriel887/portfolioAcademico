@@ -793,34 +793,13 @@
               </div>
               <div id="menuProjetos" class="itemMenuPrincipal">
                 <div
-                  class="item-menu dropdownMenu"
-                  data-divId="primeiroSemestre"
+                  class="item-menu dropdownMenu openDiv"
+                  data-divId="readmePrimeiroSemestre"
                 >
                   <label
                     ><i class="fa-solid fa-caret-right"></i>
                     <i class="orange fa-solid fa-folder"></i> 1º Semestre
                   </label>
-                  <div class="item-menu dropdownMenu">
-                    <label>
-                      <i class="fa-solid fa-caret-right"></i>
-                      <i class="purple fa-solid fa-folder"></i> imagens
-                    </label>
-                    <div class="item-menu openDiv" data-divId="imagem1">
-                      <label>
-                        <i class="fa-solid fa-image"></i>
-                        imagem1.png
-                      </label>
-                    </div>
-                  </div>
-                  <div
-                    class="item-menu openDiv"
-                    data-divId="readmePrimeiroSemestre"
-                  >
-                    <label>
-                      <i class="fa-solid fa-file-code"></i>
-                      readme.txt
-                    </label>
-                  </div>
                 </div>
 
                 <div
@@ -859,13 +838,37 @@
                     <i class="orange fa-solid fa-folder"></i> 5º Semestre
                   </label>
                 </div>
+                <div
+                  class="item-menu openDiv"
+                  data-divId="readmeSextoSemestre"
+                >
+                  <label
+                    ><i class="fa-solid fa-caret-right"></i>
+                    <i class="orange fa-solid fa-folder"></i> 6º Semestre
+                  </label>
+                </div>
               </div>
             </div>
 
             <div class="divAbas">
               <div class="menuSuperiorAbas">
                 <div class="menuAba openDiv" data-id="readmePrimeiroSemestre">
-                  <label>readme.txt</label><i class="fa-solid fa-x"></i>
+                  <label>primeiroSemestre.txt</label><i class="fa-solid fa-x"></i>
+                </div>
+                <div class="menuAba openDiv" data-id="readmeSegundoSemestre">
+                  <label>segundoSemestre.txt</label><i class="fa-solid fa-x"></i>
+                </div>
+                <div class="menuAba openDiv" data-id="readmeTerceiroSemestre">
+                  <label>terceiroSemestre.txt</label><i class="fa-solid fa-x"></i>
+                </div>
+                <div class="menuAba openDiv" data-id="readmeQuartoSemestre">
+                  <label>quartoSemestre.txt</label><i class="fa-solid fa-x"></i>
+                </div>
+                <div class="menuAba openDiv" data-id="readmeQuintoSemestre">
+                  <label>quintoSemestre.txt</label><i class="fa-solid fa-x"></i>
+                </div>
+                <div class="menuAba openDiv" data-id="readmeSextoSemestre">
+                  <label>sextoSemestre.txt</label><i class="fa-solid fa-x"></i>
                 </div>
               </div>
 
@@ -973,6 +976,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="aba hidden" id="readmeSegundoSemestre">
                 <div class="esquerdaAba">
                   <div class="w100">
@@ -1076,6 +1080,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="aba hidden" id="readmeTerceiroSemestre">
                 <div class="esquerdaAba">
                   <div class="w100">
@@ -1151,6 +1156,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="aba hidden" id="readmeQuartoSemestre">
                 <div class="esquerdaAba">
                   <div class="w100">
@@ -1239,6 +1245,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="aba hidden" id="readmeQuintoSemestre">
                 <div class="esquerdaAba">
                   <div class="w100">
@@ -1292,6 +1299,93 @@
                           <img
                             class="imgCarrossel"
                             src="img/semestre5/imagem3.jpg"
+                            alt="Continuação do Projeto Muzzik, mostrando a tela de inicial de listagem de todas as músicas"
+                          />
+                          <label class="legendaImgCarrosel"
+                            >Continuação do Projeto Muzzik, mostrando a tela de inicial de listagem de todas as músicas</label
+                          >
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <div class="center wrap gap-5">
+                          <img
+                            class="imgCarrossel"
+                            src="img/semestre5/imagem4.jpg"
+                            alt="Continuação do Projeto Muzzik, mostrando a tela de quando uma música em específico é aberta."
+                          />
+                          <label class="legendaImgCarrosel"
+                            >Continuação do Projeto Muzzik, mostrando a tela de quando uma música em específico é aberta.</label
+                          >
+                        </div>
+                      </div>
+                      <div>
+                        <div class="center wrap gap-5">
+                          <img
+                            class="imgCarrossel"
+                            src="img/semestre5/imagem5.jpg"
+                            alt="Imagem final do Projeto Muzzik, mostrando a tela de listagem de playlist"
+                          />
+                          <label class="legendaImgCarrosel"
+                            >Imagem final do Projeto Muzzik, mostrando a tela de listagem de playlist</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="aba hidden" id="readmeSextoSemestre">
+                <div class="esquerdaAba">
+                  <div class="w100">
+                    <h1>6º Semestre - Projeto Flutter</h1>
+                  </div>
+                  <div class="w100 p-v-1">
+                    <label class="fs-3"><b>Ferramentas utilizadas:</b> Dart e Flutter.</label>
+                  </div>
+                  <div class="w100">
+                    <p class="fs-2">
+                      O projeto produzido durante o segundo semestre de 2023 para a disciplina de Desenvolvimento para Dispositivos Móveis II, teve como foco o aprendizado do framework Flutter, com o objetivo de desenvolver um aplicativo para celular foi utilizado como proposta uma repaginação do projeto Muzzik anterior, mas agora com a ideia de produzir um streaming de músicas online, sem a necessidade do download das músicas localmente no celular. 
+                    </p>
+                  </div>
+                </div>
+                <div class="direitaAba">
+                  <div class="w100 mb-5 t-center">
+                    <h1>Imagens</h1>
+                  </div>
+                  <div class="w100 center">
+                    <div class="carrossel">
+                      <div>
+                        <div class="center wrap gap-5">
+                          <img
+                            class="imgCarrossel"
+                            src="img/semestre6/imagem1.jpg"
+                            alt="Imagem inicial do Projeto Muzzik, mostrando a tela de login"
+                          />
+                          <label class="legendaImgCarrosel"
+                            >Imagem inicial do Projeto Muzzik, mostrando a tela de login.</label
+                          >
+                        </div>
+                      </div>
+                      <div>
+                        <div class="center wrap gap-5">
+                          <img
+                            class="imgCarrossel"
+                            src="img/semestre6/imagem2.jpg"
+                            alt="Imagem inicial do Projeto Muzzik, mostrando a tela de cadastro"
+                          />
+                          <label class="legendaImgCarrosel"
+                            >Continuação do Projeto Muzzik, mostrando a tela de cadastro</label
+                          >
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <div class="center wrap gap-5">
+                          <img
+                            class="imgCarrossel"
+                            src="img/semestre6/imagem3.jpg"
                             alt="Continuação do Projeto Muzzik, mostrando a tela de inicial de listagem de todas as músicas"
                           />
                           <label class="legendaImgCarrosel"
