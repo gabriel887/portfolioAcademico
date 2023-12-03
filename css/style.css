@@ -538,6 +538,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   overflow-y: auto;
+  padding-bottom: 65px;
 }
 
 .aba .number {
@@ -742,7 +743,7 @@ a {
   }
 }
 
-@media  (max-width:1200px){
+@media  (max-width:1465px){
   .container{
     width: 95%;
     height: 95%;
