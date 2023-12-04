@@ -59,3 +59,19 @@
 .slick-next {
   right: -40px !important;
 }
+
+@media (max-width: 600px){
+
+  .imgCarrossel{
+    width: 80%;
+    height: 200px;
+  }
+
+  .slick-next{
+    right: -10px !important;
+  }
+
+  .slick-prev{
+    left: -10px !important;
+  }
+}

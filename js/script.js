@@ -25,6 +25,52 @@ $(document).ready(function () {
   $("body").on("click", ".menuAba i", fechaAba);
 
   popularNumeracao();
+  var abreMenu = true;
+  $('.divMenuIcone').on("click", function () {
+    if(abreMenu){
+      abreMenu = false;
+      if($(".menuMobile").hasClass("hidden")){
+        $(".menuMobile").removeClass("hidden");
+      }else{
+        $(".menuMobile").addClass("hidden");
+      }
+      setTimeout(() => {
+        abreMenu=true;
+      }, 200);
+    }
+  });
+  $('.menuMobile a').on("click", function () {
+    if(abreMenu){
+      abreMenu = false;
+      if($(".menuMobile").hasClass("hidden")){
+        $(".menuMobile").removeClass("hidden");
+      }else{
+        $(".menuMobile").addClass("hidden");
+      }
+      $("#checkbox-menu").click();
+      setTimeout(() => {
+        abreMenu=true;
+      }, 200);
+    }
+  });
+
+  $(".carrosselModal").slick({
+    dots: true,
+  });
+
+  $(".botaoFecharModal").on("click", function(){
+    $(this).parent().parent().addClass("hidden")
+  });
+
+  $(".projeto").on("click", function (){
+    let id = $(this).attr("data-id");
+    $("#"+id).removeClass("hidden");
+    $("#"+id).find(".slick-next").click();
+    setTimeout(() => {
+      $("#"+id).find(".slick-prev").click();
+    }, 1000);
+  });
+  
 });
 
 function trocaPagina() {
@@ -384,3 +430,6 @@ function fechaAba(event) {
 //fa-caret-right seta pra direita
 //sort-down seta pa baxo
 // &nbsp; espaço
+
+
+//Celular

@@ -226,6 +226,9 @@ p{
   height: 45px;
   filter: brightness(0.5);
 }
+#imgLogoFatec:hover{
+  filter: brightness(0.9);
+}
 
 #mainBemVindo {
   width: 100%;
@@ -848,4 +851,276 @@ a {
     font-size: 1.8em !important;
   }
 }
+.mobile{
+  display: none;
+}
+@media (max-width: 600px){
+  body{
+    overflow: auto;
+  }
+  .background{
+    display: none;
+  }
 
+  .mobile{
+    width: 100vw;
+    color: #87aacc;
+    display: block;
+  }
+
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  
+  html, body{
+    height: 100%;
+  }
+  
+  #checkbox-menu{
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .iconeMenu{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 30px;
+  }
+  
+  .iconeMenu span{
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: #f16234;
+    transition: 0.25s ease-in-out;
+  }
+  
+  .iconeMenu span:nth-child(1){
+    top: 0;
+  }
+  
+  .iconeMenu span:nth-child(2){
+    top: 8px;
+  }
+  
+  .iconeMenu span:nth-child(3){
+    top: 16px;
+  }
+  
+  #checkbox-menu:checked + .iconeMenu span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 8px;
+  }
+  
+  #checkbox-menu:checked + .iconeMenu span:nth-child(2){
+    opacity: 0;
+  }
+  
+  #checkbox-menu:checked + .iconeMenu span:nth-child(3){
+    transform: rotate(45deg);
+    top:8px;
+  }
+
+  .headerMobile{
+    height: 75px;
+    position: fixed;
+    left: 0;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    z-index: 5;
+    background-color: #26282b;
+  }
+
+  .divMenuIcone{
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .titleMenu{
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: white;
+  }
+
+  #textoMeuNome{
+    font-size: 2.1em !important;
+  }
+
+  #textoDesenv{
+    font-size: 1.7em !important;
+  }
+
+  .menuMobile{
+    background-color: #26282b;
+    height: calc(100vh - 75px);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 75px;
+    gap: 2rem;
+    z-index: 99;
+    width: 100%;
+  }
+
+  #snippetShowcase{
+    height: calc(100vh - 155px);
+  }
+  .snippet{
+    margin: auto;
+  }
+
+
+  .menuMobile a{
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    color: white;
+  }
+
+  .containerMobile{
+    padding: 85px 25px 0 25px;
+  }
+
+  .title{
+    text-align: center;
+  }
+
+  #downloadCurriculo{
+    border-color: #222223;
+    font-weight: bolder;
+    background-color: #f16234;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 25px;
+    margin-top: 15px;
+    color: white;
+  }
+
+  .conhecimentos{
+    padding-top: 30px;
+
+  }
+
+  #divTecnologias{
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tecnologias{
+    width: 50%;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  .tecnologias svg, .tecnologias i{
+    font-size: 2em;
+  }
+
+  .projeto{
+    position: relative;
+    padding-top: 25px;
+  }
+
+  .projeto img{
+    width: 100%;
+    border-radius: 35px;
+  }
+
+  .nomeProjeto{
+    color: white;
+    top: 0;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    background: #2b2d30c7;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+
+  .imgCelular{
+    height: 230px;
+    width: 50% !important;
+  }
+
+  .divImg{
+    text-align: center;
+  }
+
+  #projetosMobile{
+    padding-top: 30px;
+  }
+
+  .footerMobile{
+    padding-top: 5em;
+  }
+
+  .itemContato{
+    padding: 10px;
+  }
+
+  .footerFatec{
+    text-align: center;
+    padding: 30px;
+  }
+
+  .modalProjeto{
+    width: 100vw;
+    height: 100vh;
+    z-index: 98;
+    position: fixed;
+    background-color: rgba(26, 26, 26, 0.573);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tituloModal{
+    padding-bottom: 20px;
+  }
+
+  .divCarrosselModal{
+    padding-bottom: 40px;
+  }
+
+
+  .conteudoModal{
+    width: 85vw;
+    height: 95vh;
+    position: relative;
+    background-color: var(--corBordaCinza);
+    border-radius: 20px;
+    padding: 15px;
+    overflow-y: auto;
+  }
+
+  .botaoFecharModal{
+    font-size: 30px;
+    position: absolute;
+    right: 10px; 
+  }
+
+}
