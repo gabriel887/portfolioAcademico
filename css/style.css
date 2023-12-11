@@ -977,6 +977,7 @@ a {
 
   #snippetShowcase{
     height: calc(100vh - 155px);
+    min-height: 270px;
   }
   .snippet{
     margin: auto;
